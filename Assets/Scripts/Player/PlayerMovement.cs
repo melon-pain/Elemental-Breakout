@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour, ISwipeHandler
     [SerializeField] private float m_MoveSpeed = 10.0f;
     [SerializeField] private float m_DodgeSpeed = 25.0f;
     private Vector3 m_DodgeDirection = Vector3.zero;
+    public bool isDodging { get => m_IsDodging; }
     private bool m_IsDodging = false;
     private Coroutine DodgeCoroutine = null;
 
@@ -56,11 +57,10 @@ public class PlayerMovement : MonoBehaviour, ISwipeHandler
 
     public void OnSwipe(SwipeEventData eventData)
     {
-        if (eventData.direction == SwipeDirection.Left || eventData.direction == SwipeDirection.Right)
+        if ((eventData.direction == SwipeDirection.Left || eventData.direction == SwipeDirection.Right) && !m_IsDodging)
         {
             m_DodgeDirection = eventData.swipeVector.normalized;
-            if (!m_IsDodging)
-                DodgeCoroutine = StartCoroutine(Dodge());
+            DodgeCoroutine = StartCoroutine(Dodge());
         }
     }
 }

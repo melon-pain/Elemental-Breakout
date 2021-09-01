@@ -38,14 +38,14 @@ public class Bar : MonoBehaviour
     private IEnumerator Transition_Low()
     {
         m_TransitionBar.color = Color.red;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
 
         float oldFillAmount = m_TransitionBar.fillAmount;
         float time = 0.0f;
         while (m_TransitionBar.fillAmount > m_Bar.fillAmount)
         {
             m_TransitionBar.fillAmount = Mathf.Lerp(oldFillAmount, m_Bar.fillAmount, time);
-            time += 0.02f;
+            time += 0.025f;
 
             yield return new WaitForSeconds(0.01f);
         }

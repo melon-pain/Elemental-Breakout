@@ -21,6 +21,7 @@ public class Player : MonoBehaviour, IDamage
     [SerializeField] private Bar m_HPBar;
     [SerializeField] private TMP_Text m_HPText;
     private bool m_IsInvulnerable = false;
+    private Coroutine InvulnerableCoroutine = null;
     #endregion HP
 
     #region SP
@@ -58,7 +59,7 @@ public class Player : MonoBehaviour, IDamage
 
     public void TakeDamage(Element attacking, float amount)
     {
-        if (m_IsInvulnerable)
+        if (m_IsInvulnerable || GetComponent<PlayerMovement>().isDodging)
             return;
         if (m_CurrentSP > 0.0f)
         {
@@ -68,6 +69,8 @@ public class Player : MonoBehaviour, IDamage
                 StopCoroutine(RecoverSPCoroutine);
             RecoverSPCoroutine = StartCoroutine(RecoverSP());
 
+            if (InvulnerableCoroutine != null)
+                StopCoroutine(InvulnerableCoroutine);
             StartCoroutine(BecomeInvulnerable());
         }
         else if (m_CurrentHP > 0.0f)

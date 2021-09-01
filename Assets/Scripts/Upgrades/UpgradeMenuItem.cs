@@ -28,7 +28,7 @@ public class UpgradeMenuItem : MonoBehaviour
     {
         m_UpgradeBar.UpdateBar((float)stat.upgradeLevel / stat.maxUpgradeLevel);
         m_CostText.text = stat.GetUpgradeCost().ToString() + "G";
-        m_UpgradeButton.interactable = stat.CanBeUpgraded() && upgrades.currency >= stat.GetUpgradeCost();
-        m_FundsText.text = $"Funds: <b>{upgrades.currency}G</b>";
+        m_UpgradeButton.interactable = stat.CanBeUpgraded() && upgrades.funds >= stat.GetUpgradeCost();
+        m_FundsText.text = $"Funds: <b>{upgrades.funds}G</b>";
     }
 }

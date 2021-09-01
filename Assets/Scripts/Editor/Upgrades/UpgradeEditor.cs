@@ -71,7 +71,7 @@ public class StatEditor : PropertyDrawer
 [CustomEditor(typeof(Upgrades))]
 public class UpgradesEditor : Editor
 {
-    private SerializedProperty currency;
+    private SerializedProperty funds;
     private static bool showPlayer
     {
         get { return SessionState.GetBool("SHOW_PLAYER", false); }
@@ -102,7 +102,7 @@ public class UpgradesEditor : Editor
 
     private void OnEnable()
     {
-        currency = serializedObject.FindProperty("m_currency");
+        funds = serializedObject.FindProperty("m_Funds");
 
         maxHP = serializedObject.FindProperty("m_maxHP");
         maxSP = serializedObject.FindProperty("m_maxSP");
@@ -119,7 +119,7 @@ public class UpgradesEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        EditorGUILayout.PropertyField(currency, new GUIContent("Currency"));
+        EditorGUILayout.PropertyField(funds, new GUIContent("Funds"));
   
         showPlayer = EditorGUILayout.BeginFoldoutHeaderGroup(showPlayer, "Player");
 
@@ -162,7 +162,6 @@ public class UpgradesEditor : Editor
 
         EditorGUILayout.EndFoldoutHeaderGroup();
 
-        serializedObject.UpdateIfRequiredOrScript();
         serializedObject.ApplyModifiedProperties();
     }
 }

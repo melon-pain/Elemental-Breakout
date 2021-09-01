@@ -50,10 +50,10 @@ public class Stat
 [System.Serializable][CreateAssetMenu(fileName = "Upgrades")]
 public class Upgrades : ScriptableObject
 {
-    #region Currency
-    public int currency { get => m_currency; }
-    [SerializeField, Min(0)] private int m_currency = 0;
-    #endregion Currency
+    #region Funds
+    public int funds { get => m_Funds; }
+    [SerializeField, Min(0)] private int m_Funds = 0;
+    #endregion Funds
 
     #region Player 
     public Stat maxHP { get => m_maxHP; }
@@ -84,19 +84,19 @@ public class Upgrades : ScriptableObject
     
     public void AddCurrency(int amount)
     {
-        this.m_currency += amount;
+        this.m_Funds += amount;
     }
 
     public void LoseCurrency(int amount)
     {
-        this.m_currency = Mathf.Max(0, this.m_currency - amount);
+        this.m_Funds = Mathf.Max(0, this.m_Funds - amount);
     }
 
     public void Upgrade(string stat)
     {
         Stat upgrade = GetType().GetProperty(stat).GetValue(this, null) as Stat;
 
-        if (!upgrade.CanBeUpgraded() || upgrade.GetUpgradeCost() > currency)
+        if (!upgrade.CanBeUpgraded() || upgrade.GetUpgradeCost() > funds)
         {
             return;
         }

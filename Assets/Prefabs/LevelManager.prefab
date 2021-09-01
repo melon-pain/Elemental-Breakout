@@ -46,3 +46,5 @@ MonoBehaviour:
   level: {fileID: 11400000, guid: 5ba3757583c7390428f5ab5c3769fdef, type: 2}
   m_Score: 0
   m_ScoreText: {fileID: 0}
+  m_GameOverScreen: {fileID: 0}
+  m_TotalScoreText: {fileID: 0}
