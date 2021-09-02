@@ -38,7 +38,7 @@ public class GestureManager : MonoBehaviour
     private Vector2 endPoint = Vector2.zero;
     private float gestureTime = 0.0f;
 
-    private bool wasTouchingUI = false;
+    //private bool wasTouchingUI = false;
     private bool hasGesture = false;
 
     private EventSystem eventSystem;
@@ -84,15 +84,10 @@ public class GestureManager : MonoBehaviour
         //Consume UI
         if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId) || EventSystem.current.currentSelectedGameObject)
         {
-            wasTouchingUI = true;
+            finger_1 = new Touch();
             return;
         }
-
-        else if (wasTouchingUI)
-        {
-            wasTouchingUI = false;
-            return;
-        }
+       
 
         finger_1 = Input.GetTouch(0);
 
@@ -130,13 +125,8 @@ public class GestureManager : MonoBehaviour
             EventSystem.current.IsPointerOverGameObject(Input.GetTouch(1).fingerId) || 
             EventSystem.current.currentSelectedGameObject)
         {
-            wasTouchingUI = true;
-            return;
-        }
-
-        else if (wasTouchingUI)
-        {
-            wasTouchingUI = false;
+            finger_1 = new Touch();
+            finger_2 = new Touch();
             return;
         }
 

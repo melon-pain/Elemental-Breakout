@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c06542910dfb754aa670a52b12bb428, type: 3}
   m_Name: UpgradeAsset
   m_EditorClassIdentifier: 
-  m_currency: 0
+  m_Funds: 0
   m_maxHP:
     m_baseValue: 50
     m_additionalValue: 50

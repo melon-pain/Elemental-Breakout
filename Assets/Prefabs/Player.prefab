@@ -78,8 +78,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrades: {fileID: 11400000, guid: a4a44b4eda6e09f4a906d56265069321, type: 2}
   m_Element: 0
-  m_WeaponType: 1
+  m_WeaponType: 0
   m_Projectiles: {fileID: 6826963024908893844}
+  m_ProjectileRenderer: {fileID: 6688572464254539990}
+  m_ProjectileColors:
+  - {r: 16, g: 0, b: 0, a: 1}
+  - {r: 0, g: 10.666667, b: 16, a: 1}
+  - {r: 16, g: 12.862745, b: 0, a: 1}
+  - {r: 0, g: 16, b: 0, a: 1}
   m_ProjectileDamage: 0
   m_ProjectileMPCost: 0
   m_ProjectileFireRate: 0
@@ -4834,7 +4840,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6a1143ee683302f4aa628c052723efc1, type: 2}
+  - {fileID: 2100000, guid: 3ddabca4f3143ab47809e6c64fe80b70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

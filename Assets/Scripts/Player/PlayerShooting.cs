@@ -21,6 +21,8 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
 
     [Header("Projectile")]
     [SerializeField] private ParticleSystem m_Projectiles;
+    [SerializeField] private ParticleSystemRenderer m_ProjectileRenderer;
+    [ColorUsageAttribute(true, true)][SerializeField] private List<Color> m_ProjectileColors = new List<Color>();
     [SerializeField] private float m_ProjectileDamage;
     [SerializeField] private float m_ProjectileMPCost;
     [SerializeField] private float m_ProjectileFireRate;
@@ -53,6 +55,7 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
     private void Start()
     {
         this.IntializeStats();
+        this.ChangeElement(0);
     }
 
     // Update is called once per frame
@@ -158,6 +161,7 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
     public void ChangeElement(int newElement)
     {
         m_Element = (Element)newElement;
+        m_ProjectileRenderer.material.SetColor("_EmissionColor", m_ProjectileColors[newElement]);
     }
 
     private void OnParticleCollision(GameObject other)
