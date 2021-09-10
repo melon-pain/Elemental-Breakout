@@ -10,7 +10,10 @@ public class UpgradeMenu : MonoBehaviour
     {
         foreach(UpgradeMenuItem item in items)
         {
-            item.UpdateItem();
+            if(item.gameObject.activeSelf)
+            {
+                item.UpdateItem();
+            }
         }
     }
 }

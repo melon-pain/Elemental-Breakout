@@ -20,7 +20,6 @@ public class Leaderboards : MonoBehaviour
         if (Application.internetReachability != NetworkReachability.NotReachable)
         {
             OnLeaderboardOpen.Invoke();
-            Handheld.Vibrate();
             GetAllScores();
         }
     }
