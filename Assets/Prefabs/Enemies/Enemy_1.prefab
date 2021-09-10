@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3736015678413116650}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Indicator Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -680,7 +680,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 7855a51e5d609fd4c98599dc9416cf43, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -740,7 +740,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7939299653739972152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7939299653863910530}
@@ -761,6 +761,11 @@ MonoBehaviour:
   m_Element: 0
   m_Projectiles: {fileID: 7939299653739972149}
   m_Damage: 10
+  m_ProjectileColors:
+  - {r: 0.9, g: 0.25058824, b: 0.091764696, a: 1}
+  - {r: 0.4509804, g: 0.7516341, b: 0.9019608, a: 1}
+  - {r: 0.9019608, g: 0.7396079, b: 0.09019604, a: 1}
+  - {r: 0.16078429, g: 0.8, b: 0.3738563, a: 1}
   m_Animator: {fileID: 7939299653863910531}
 --- !u!199 &7939299653739972148
 ParticleSystemRenderer:
@@ -782,7 +787,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6a1143ee683302f4aa628c052723efc1, type: 2}
+  - {fileID: 2100000, guid: 3ddabca4f3143ab47809e6c64fe80b70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5620,9 +5625,22 @@ MonoBehaviour:
   m_MaxHP: 50
   m_CurrentHP: 100
   m_HPBar: {fileID: 1620944980183586169}
+  m_Body: {fileID: 7939299654624243415}
+  m_BodyColors:
+  - {r: 0.9, g: 0.25058824, b: 0.091764696, a: 1}
+  - {r: 0.4509804, g: 0.7516341, b: 0.9019608, a: 1}
+  - {r: 0.9019608, g: 0.7396079, b: 0.09019604, a: 1}
+  - {r: 0.16078429, g: 0.8, b: 0.3738563, a: 1}
+  m_Core: {fileID: 7939299653615646594}
+  m_CoreColors:
+  - {r: 0.9, g: 0.25058824, b: 0.091764696, a: 1}
+  - {r: 0.4509804, g: 0.7516341, b: 0.9019608, a: 1}
+  - {r: 0.9019608, g: 0.7396079, b: 0.09019604, a: 1}
+  - {r: 0.16078429, g: 0.8, b: 0.3738563, a: 1}
   assetBundleManager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
   m_ElementIcon: {fileID: 8419381414910552792}
   m_HPBarIcon: {fileID: 381950392753215574}
+  m_Indicator: {fileID: 4641790029217257716}
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -5676,7 +5694,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: fee44a93cdc51de4b9989c0d638530e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

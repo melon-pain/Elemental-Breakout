@@ -14,10 +14,19 @@ public class Enemy : MonoBehaviour, IDamage
     [ReadOnlyInInspector, SerializeField] protected float m_CurrentHP = 100.0f;
     [SerializeField] private Bar m_HPBar;
 
+    [Header("Body")]
+    [SerializeField] private SkinnedMeshRenderer m_Body;
+    [SerializeField] List<Color> m_BodyColors = new List<Color>();
+
+    [Header("Core")]
+    [SerializeField] private SkinnedMeshRenderer m_Core;
+    [ColorUsage(true, true)] [SerializeField] List<Color> m_CoreColors = new List<Color>();
+
     [Header("UI")]
     [SerializeField] private AssetBundleManager assetBundleManager;
     [SerializeField] private Image m_ElementIcon;
     [SerializeField] private Image m_HPBarIcon;
+    [SerializeField] private Image m_Indicator;
 
     public bool isDead { get => m_IsDead; }
     protected bool m_IsDead = false;
@@ -28,6 +37,9 @@ public class Enemy : MonoBehaviour, IDamage
     private void Start()
     {
         m_Element = (Element)UnityEngine.Random.Range(0, 4);
+
+        m_Body.material.SetColor("_BaseColor", m_BodyColors[(int)m_Element]);
+        m_Core.material.SetColor("_BaseColor", m_CoreColors[(int)m_Element]);
 
         Sprite[] icons = assetBundleManager.LoadBundle("uibundle").LoadAssetWithSubAssets<Sprite>("T_Enemy_Element");
         m_ElementIcon.sprite = Array.Find<Sprite>(icons, item => item.name == "T_Enemy_Element_" + m_Element.ToString() );
