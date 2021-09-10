@@ -16,10 +16,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.assetbundlebrowser": {
-      "version": "file:C:/Users/melon/Desktop/AssetBundles-Browser-1.7.0",
+      "version": "1.7.0",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
     },
     "com.unity.cinemachine": {
       "version": "2.6.9",
@@ -177,6 +178,13 @@
         "com.unity.render-pipelines.core": "10.5.1"
       },
       "url": "https://packages.unity.com"
+    },
+    "jillejr.newtonsoft.json-for-unity": {
+      "version": "13.0.102",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://npm.cloudsmith.io/jillejr/newtonsoft-json-for-unity"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
