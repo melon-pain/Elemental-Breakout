@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 using System;
 using UnityEngine.Advertisements;
-
 public class AdsManager : MonoBehaviour, IUnityAdsListener
 {
-    public EventHandler<AdFinishEventArgs> OnAdDone;
+    public UnityEvent OnAdDone;
 
     public string GameID
     {
@@ -63,7 +63,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
             yield return new WaitForSeconds(0.5f);
         }
 
-        Advertisement.Banner.SetPosition(BannerPosition.TOP_CENTER);
+        Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
         Advertisement.Banner.Show(AndroidBanner);
     }
 
@@ -102,10 +102,21 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
 
     public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
     {
-        if(OnAdDone != null)
+        if(OnAdDone.GetPersistentEventCount() > 0)
         {
-            AdFinishEventArgs args = new AdFinishEventArgs(placementId, showResult);
-            OnAdDone(this, args);
+            if (placementId == AndroidRewarded)
+            {
+                switch (showResult)
+                {
+                    case ShowResult.Failed: Debug.Log("Ad Failed"); break;
+                    case ShowResult.Skipped: Debug.Log("Ad Skipped"); break;
+                    case ShowResult.Finished:
+                        Debug.Log("Ad Finished");
+                        //Reward here
+                        OnAdDone.Invoke();
+                        break;
+                }
+            }
         }
     }
 }
