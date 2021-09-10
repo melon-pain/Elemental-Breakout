@@ -124,8 +124,8 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
 
                     if (Physics.SphereCast(r, 1.0f, out hit, 100.0f, LayerMask.GetMask("Enemy"), QueryTriggerInteraction.Ignore))
                     {
-                        Enemy enemy = hit.collider.GetComponent<Enemy>();
-                        enemy.TakeDamage(m_Element, m_BeamDamage);
+                        IDamage damage = hit.collider.GetComponent<IDamage>();
+                        damage.TakeDamage(m_Element, m_BeamDamage);
                         m_BeamHit.transform.position = hit.point;
                         m_BeamHit.Play();
                     }
@@ -174,11 +174,8 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
 
     private void OnParticleCollision(GameObject other)
     {
-        if (other.tag == "Enemy")
-        {
-            Enemy enemy = other.GetComponent<Enemy>();
-            enemy.TakeDamage(m_Element, m_ProjectileDamage);
-        }
+        IDamage damage = other.GetComponent<IDamage>();
+        damage.TakeDamage(m_Element, m_ProjectileDamage);
     }
 
     public void LockOn (TapEventData eventData)

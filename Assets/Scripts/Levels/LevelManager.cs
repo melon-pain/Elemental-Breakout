@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class LevelManager : MonoBehaviour
@@ -15,29 +16,19 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private TMP_Text m_ScoreText;
 
     [Header("Game Over")]
-    [SerializeField] private GameObject m_GameOverScreen;
+    [SerializeField] private GameObject m_LevelClearScreen;
+    [SerializeField] private TMP_Text m_LevelClearText;
     [SerializeField] private TMP_Text m_TotalScoreText;
     [SerializeField] private TMP_Text m_TotalFundsText;
+    [SerializeField] private GameObject m_ContinueButton;
 
     [Header("Upgrades")]
     [SerializeField] private Upgrades upgrades;
 
-    private void Start()
-    {
-        if (level.isFirstTime)
-        {
-            ShowTutorial();
-        }
-    }
 
     private void FixedUpdate()
     {
         m_TimeElapsed += Time.fixedDeltaTime;
-    }
-
-    private void ShowTutorial()
-    {
-
     }
 
     public void AddScore(int amount)
@@ -72,11 +63,18 @@ public class LevelManager : MonoBehaviour
             int funds = m_Score / 10;
             upgrades.AddCurrency(funds);
             m_TotalFundsText.text = funds.ToString();
+
+            m_LevelClearText.text = "LEVEL CLEAR";
+            m_ContinueButton.SetActive(true);
+        }
+        else
+        {
+            m_LevelClearText.text = "GAME OVER";
+            m_ContinueButton.SetActive(false);
         }
 
         PauseGame();
-        m_GameOverScreen.SetActive(true);
+        m_LevelClearScreen.SetActive(true);
         m_TotalScoreText.text = m_Score.ToString();
     }
-
 }

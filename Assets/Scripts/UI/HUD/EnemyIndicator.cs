@@ -7,7 +7,7 @@ public class EnemyIndicator : MonoBehaviour
 {
     [SerializeField] private GameObject m_Follow;
     [SerializeField] private RectTransform parentRectTransform;
-    [SerializeField] private Image m_Image;
+    private Image m_Image;
     private RectTransform rectTransform;
     private Renderer rend;
     private Vector3 minPosition;
@@ -29,7 +29,10 @@ public class EnemyIndicator : MonoBehaviour
             Vector3 worldToScreen = Camera.main.WorldToScreenPoint(m_Follow.transform.position);
             worldToScreen.x = Mathf.Clamp(worldToScreen.x, rectTransform.rect.width / 2, Screen.width - rectTransform.rect.width / 2);
             worldToScreen.y = Mathf.Clamp(worldToScreen.y, rectTransform.rect.height / 2, Screen.height - rectTransform.rect.height / 2);
+
+            Vector3 angle = worldToScreen - new Vector3(Screen.width / 2, Screen.height / 2, 0.0f);
             this.transform.position = worldToScreen;
+            this.transform.localEulerAngles = new Vector3(0.0f, 0.0f, Mathf.Atan2(angle.y, angle.x) * Mathf.Rad2Deg);
         }
         else
         {
