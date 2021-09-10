@@ -8,7 +8,7 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private Element m_Element;
     [Header("Projectile")]
     [SerializeField] private ParticleSystem m_Projectiles;
-    [SerializeField] private float m_Damage = 10.0f;
+    [SerializeField] private float m_Damage = 5.0f;
 
     [Header("Animator")]
     [SerializeField] private Animator m_Animator;
@@ -34,7 +34,7 @@ public class EnemyShooting : MonoBehaviour
                 break;
             m_Projectiles.Play();
             m_Animator.SetBool("IsShooting", true);
-            yield return new WaitForSeconds(Random.Range(2.0f, 4.0f));
+            yield return new WaitForSeconds(Random.Range(1.0f, 2.0f));
         }
         yield break;
     }

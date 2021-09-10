@@ -3,7 +3,6 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 public class GestureManager : MonoBehaviour
 {
-    public static GestureManager instance = null;
     private Touch finger_1;
     private Touch finger_2;
 
@@ -46,11 +45,6 @@ public class GestureManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        if (!instance)
-            instance = this;
-        else
-            Destroy(this.gameObject);
-
         eventSystem = EventSystem.current;
     }
 
@@ -88,12 +82,6 @@ public class GestureManager : MonoBehaviour
             return;
         }
 
-        else if (wasTouchingUI)
-        {
-            wasTouchingUI = false;
-            return;
-        }
-
         finger_1 = Input.GetTouch(0);
 
         switch (finger_1.phase)
@@ -103,6 +91,11 @@ public class GestureManager : MonoBehaviour
                 gestureTime = 0.0f;
                 break;
             case TouchPhase.Ended:
+                if (wasTouchingUI)
+                {
+                    wasTouchingUI = false;
+                    return;
+                }
                 endPoint = finger_1.position;
                 if (gestureTime <= tapProperty.GetTapTime() && Vector2.Distance(startPoint, endPoint) < (Screen.dpi * tapProperty.GetTapDistance()))
                 {
@@ -110,6 +103,8 @@ public class GestureManager : MonoBehaviour
                 }
                 else if (gestureTime <= swipeProperty.GetSwipeTime() && Vector2.Distance(startPoint, endPoint) >= (Screen.dpi * swipeProperty.GetMinSwipeDistance()))
                 {
+                    Debug.Log($"Start: {startPoint}");
+                    Debug.Log($"End: {endPoint}");
                     Swipe();
                 }
                 break;
@@ -130,10 +125,11 @@ public class GestureManager : MonoBehaviour
             EventSystem.current.IsPointerOverGameObject(Input.GetTouch(1).fingerId) || 
             EventSystem.current.currentSelectedGameObject)
         {
+            finger_1 = new Touch();
+            finger_2 = new Touch();
             wasTouchingUI = true;
             return;
         }
-
         else if (wasTouchingUI)
         {
             wasTouchingUI = false;
@@ -158,6 +154,7 @@ public class GestureManager : MonoBehaviour
             if (Mathf.Abs(distance) >= (spreadProperty.MinDistanceChange * Screen.dpi))
             {
                 Spread(distance);
+                Debug.Log("Spread");
             }
 
             else if (currDistance >= rotateProperty.minDistance * Screen.dpi)

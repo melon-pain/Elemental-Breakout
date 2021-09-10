@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     [ReadOnlyInInspector] public float progress = 0.0f;
+    public UnityEvent OnLoadSceneStart = new UnityEvent();
     public UnityEvent<float> OnLoadSceneProgress = new UnityEvent<float>();
 
     public void LoadSceneSingle(int sceneBuildIndex)
@@ -53,28 +54,35 @@ public class SceneLoader : MonoBehaviour
     private IEnumerator LoadSceneAsync(int sceneBuildIndex, LoadSceneMode mode)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneBuildIndex, mode);
-
-        while (!operation.isDone)
+        if (OnLoadSceneStart.GetPersistentEventCount() > 0)
+            OnLoadSceneStart.Invoke();
+        while (operation.progress < 0.9f)
         {
             this.progress = operation.progress;
-            if (OnLoadSceneProgress != null)
+
+            if (OnLoadSceneProgress.GetPersistentEventCount() > 0)
                 OnLoadSceneProgress.Invoke(this.progress);
             yield return new WaitForEndOfFrame();
         }
+        yield return new WaitForSeconds(1.0f);
+        operation.allowSceneActivation = true;
     }
 
     private IEnumerator LoadSceneAsync(string sceneName, LoadSceneMode mode)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName, mode);
-
-        while (!operation.isDone)
+        operation.allowSceneActivation = false;
+        if (OnLoadSceneStart.GetPersistentEventCount() > 0)
+            OnLoadSceneStart.Invoke();
+        while (operation.progress < 0.9f)
         {
-            yield return new WaitForSeconds(1f);
             this.progress = operation.progress;
 
-            if (OnLoadSceneProgress != null)
+            if (OnLoadSceneProgress.GetPersistentEventCount() > 0)
                 OnLoadSceneProgress.Invoke(this.progress);
             yield return new WaitForEndOfFrame();
         }
+        yield return new WaitForSeconds(1.0f);
+        operation.allowSceneActivation = true;
     }
 }

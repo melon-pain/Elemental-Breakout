@@ -81,7 +81,7 @@ public class Upgrades : ScriptableObject
     public Stat beamCost { get => m_beamCost; }
     [SerializeField] private Stat m_beamCost = new Stat();
     #endregion Beam
-    
+
     public void AddCurrency(int amount)
     {
         this.m_Funds += amount;
@@ -101,7 +101,8 @@ public class Upgrades : ScriptableObject
             return;
         }
 
-        upgrade.Upgrade();
         this.LoseCurrency(upgrade.GetUpgradeCost());
+        upgrade.Upgrade();
     }
+
 }

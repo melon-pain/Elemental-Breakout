@@ -111,7 +111,7 @@ public class Player : MonoBehaviour, IDamage
     private IEnumerator BecomeInvulnerable()
     {
         m_IsInvulnerable = true;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.0f);
         m_IsInvulnerable = false;
         yield break;
     }

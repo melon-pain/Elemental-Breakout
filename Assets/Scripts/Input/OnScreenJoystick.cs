@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class OnScreenJoystick : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [Header("Smoothing Filtering")]
+    [Header("Smooth Filtering")]
     [SerializeField] private bool m_EnableSmoothing = true;
     [SerializeField, Min(1.0f)] private float m_SmoothSpeed = 10.0f;
 
@@ -33,10 +33,11 @@ public class OnScreenJoystick : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     public void OnBeginDrag(PointerEventData eventData)
     {
         m_isDragging = true;
+        m_Thumb.position = eventData.position;
+
         if (ResetCoroutine != null)
         {
             StopCoroutine(ResetCoroutine);
-            ResetCoroutine = null;
         }
         EventSystem.current.SetSelectedGameObject(m_Thumb.gameObject, eventData);
     }
