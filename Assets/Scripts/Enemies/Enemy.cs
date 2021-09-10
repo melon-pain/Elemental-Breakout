@@ -10,8 +10,8 @@ public class Enemy : MonoBehaviour, IDamage
     public Element element { get => m_Element; }
     [SerializeField] protected Element m_Element;
 
-    [SerializeField] protected float m_MaxHP = 100.0f;
-    [ReadOnlyInInspector, SerializeField] protected float m_CurrentHP = 100.0f;
+    [SerializeField] protected float m_MaxHP = 50.0f;
+    [ReadOnlyInInspector, SerializeField] protected float m_CurrentHP = 50.0f;
     [SerializeField] private Bar m_HPBar;
 
     [Header("Body")]
@@ -45,6 +45,7 @@ public class Enemy : MonoBehaviour, IDamage
         m_ElementIcon.sprite = Array.Find<Sprite>(icons, item => item.name == "T_Enemy_Element_" + m_Element.ToString() );
 
         m_HPBarIcon.sprite = assetBundleManager.GetAsset<Sprite>("uibundle", "T_Bar");
+        m_Indicator.sprite = assetBundleManager.GetAsset<Sprite>("uibundle", "T_Indicator");
 
         player = FindObjectOfType<Player>();
         transform.LookAt(player.transform);
@@ -62,7 +63,9 @@ public class Enemy : MonoBehaviour, IDamage
     public void TakeDamage(Element attacking, float amount)
     {
         if (m_IsDead)
+        {
             return;
+        }
 
         m_CurrentHP -= amount * Damage.GetModifier(attacking, m_Element);
 

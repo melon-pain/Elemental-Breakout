@@ -43,10 +43,7 @@ public class EnemyShooting : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        if (other.tag == "Player")
-        {
-            Player player = other.GetComponent<Player>();
-            player.TakeDamage(m_Element, m_Damage);
-        }
+        IDamage damage = other.GetComponent<IDamage>();
+        damage.TakeDamage(m_Element, m_Damage);
     }
 }
