@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: f3d953bb1d3f5454a9f53fec1f2bf68b
+guid: a08c8172b26f1fb46b01e5572575a6b0
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 292701736336659805
+    second: T_Enemy_Element_Fire
+  - first:
+      213: 1059840698898314875
+    second: T_Enemy_Element_Ice
+  - first:
+      213: -2088827451676571774
+    second: T_Enemy_Element_Lightning
+  - first:
+      213: 2143388154491759259
+    second: T_Enemy_Element_Wind
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,14 +53,14 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -125,7 +137,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: T_Enemy_Element_Fire
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d559c7bada2ef0400800000000000000
+      internalID: 292701736336659805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Enemy_Element_Ice
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76f558108f45be00800000000000000
+      internalID: 1059840698898314875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Enemy_Element_Lightning
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287cbb1ff7ef203e0800000000000000
+      internalID: -2088827451676571774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_Enemy_Element_Wind
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ae24c9b28debd10800000000000000
+      internalID: 2143388154491759259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -140,5 +236,5 @@ TextureImporter:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: uibundle
   assetBundleVariant: 

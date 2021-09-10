@@ -190,6 +190,7 @@ MonoBehaviour:
   m_UpgradeBar: {fileID: 6143444477967379445}
   m_UpgradeButton: {fileID: 82917072432276889}
   m_CostText: {fileID: 82917071779835836}
+  m_FundsText: {fileID: 0}
 --- !u!1 &82917071911513696
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +268,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 5
+  m_PixelsPerUnitMultiplier: 4
   m_Skew: {x: 45, y: 0}
 --- !u!114 &82917071911513700
 MonoBehaviour:

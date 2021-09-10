@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.VFX;
 
 public class PlayerShooting : MonoBehaviour, ISpreadHandler
 {
@@ -21,15 +23,15 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
 
     [Header("Projectile")]
     [SerializeField] private ParticleSystem m_Projectiles;
-    [SerializeField] private ParticleSystemRenderer m_ProjectileRenderer;
-    [ColorUsageAttribute(true, true)][SerializeField] private List<Color> m_ProjectileColors = new List<Color>();
+    [SerializeField] private List<Color> m_ProjectileColors = new List<Color>();
     [SerializeField] private float m_ProjectileDamage;
     [SerializeField] private float m_ProjectileMPCost;
     [SerializeField] private float m_ProjectileFireRate;
     private bool m_IsShooting = false;
 
     [Header("Beam")]
-    [SerializeField] private LineRenderer m_Beam;
+    [SerializeField] private GameObject m_Beam;
+    [SerializeField] private ParticleSystem m_BeamHit;
     [SerializeField] private float m_BeamDamage;
     [SerializeField] private float m_BeamMPCost;
     [SerializeField] private float m_BeamTickRate;
@@ -61,7 +63,7 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
     // Update is called once per frame
     private void Update()
     {
-        if (Input.acceleration.sqrMagnitude > 4.0f)
+        if (Input.acceleration.sqrMagnitude >= 2.0f)
         {
             RechargeMana();
         }
@@ -69,12 +71,6 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
         if (m_Target)
         {
             this.transform.LookAt(m_Target.transform);
-        }
-
-        if (m_Beam.enabled)
-        {
-            m_Beam.SetPosition(0, this.transform.position);
-            m_Beam.SetPosition(1, this.transform.forward * 50.0f);
         }
     }
 
@@ -107,15 +103,17 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
         {
             case WeaponType.Projectile:
                 m_Projectiles.Play();
+                //m_VFX.Play();
                 while (m_IsShooting && m_CurrentMP > 0.0f)
                 {
                     ConsumeMana(m_ProjectileMPCost);
                     yield return new WaitForSeconds(1.0f / m_ProjectileFireRate);
                 }
                 this.m_Projectiles.Stop();
+                //m_VFX.Stop();
                 break;
             case WeaponType.Beam:
-                m_Beam.enabled = true;
+                m_Beam.SetActive(true);
                 RemoveLockOn();
                 while (m_IsShooting && m_CurrentMP > 0.0f)
                 {
@@ -123,15 +121,17 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
 
                     Ray r = new Ray(this.transform.position, this.transform.forward);
                     RaycastHit hit;
-                    if (Physics.Raycast(r, out hit, 100.0f, LayerMask.GetMask("Enemy"), QueryTriggerInteraction.Ignore))
+
+                    if (Physics.SphereCast(r, 1.0f, out hit, 100.0f, LayerMask.GetMask("Enemy"), QueryTriggerInteraction.Ignore))
                     {
                         Enemy enemy = hit.collider.GetComponent<Enemy>();
                         enemy.TakeDamage(m_Element, m_BeamDamage);
+                        m_BeamHit.transform.position = hit.point;
+                        m_BeamHit.Play();
                     }
-
                     yield return new WaitForSeconds(1.0f / m_BeamTickRate);
                 }
-                m_Beam.enabled = false;
+                m_Beam.SetActive(false);
                 break;
         }
 
@@ -161,7 +161,15 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
     public void ChangeElement(int newElement)
     {
         m_Element = (Element)newElement;
-        m_ProjectileRenderer.material.SetColor("_EmissionColor", m_ProjectileColors[newElement]);
+
+        var main = m_Projectiles.main;
+        main.startColor = m_ProjectileColors[newElement];
+
+        var beamMain = m_BeamHit.main;
+        beamMain.startColor = m_ProjectileColors[newElement];
+
+        m_Beam.GetComponent<MeshRenderer>().materials[0].SetColor("_EmissionColor", m_ProjectileColors[newElement] * 4);
+        m_Beam.GetComponent<MeshRenderer>().materials[1].SetColor("_EmissionColor", m_ProjectileColors[newElement] * 16);
     }
 
     private void OnParticleCollision(GameObject other)
@@ -194,6 +202,7 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
         m_AimTarget.transform.parent = this.transform.parent;
         m_AimTarget.transform.localPosition = new Vector3(0.0f, 0.0f, 2.0f);
         m_AimTarget.transform.localRotation = Quaternion.identity;
+        this.transform.localRotation = Quaternion.identity;
         m_Target = null;
     }
 
