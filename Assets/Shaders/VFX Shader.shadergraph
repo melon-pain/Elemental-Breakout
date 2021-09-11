@@ -838,7 +838,7 @@
     "m_ActiveSubTarget": {
         "m_Id": "9020c6e4a9ff480c91b706694e05d8e4"
     },
-    "m_SurfaceType": 0,
+    "m_SurfaceType": 1,
     "m_AlphaMode": 0,
     "m_TwoSided": false,
     "m_AlphaClip": true,
@@ -876,7 +876,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"4e0f0d6b79a99544dbd4637857a9f002\",\"type\":3}}",
         "m_Guid": ""
     },
     "m_Modifiable": true,

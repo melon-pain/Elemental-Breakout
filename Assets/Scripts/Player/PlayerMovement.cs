@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour, ISwipeHandler
     [Header("Movement")]
     [SerializeField] private float m_MoveSpeed = 10.0f;
     [SerializeField] private float m_DodgeSpeed = 25.0f;
+    [SerializeField] private float m_MovementRange = 20.0f;
     private Vector3 m_DodgeDirection = Vector3.zero;
     public bool isDodging { get => m_IsDodging; }
     private bool m_IsDodging = false;
@@ -32,6 +33,7 @@ public class PlayerMovement : MonoBehaviour, ISwipeHandler
     {
         Vector3 axis = this.m_Joystick.axis;
         this.transform.localPosition += axis * m_MoveSpeed * Time.deltaTime;
+        this.transform.localPosition = Vector3.ClampMagnitude(this.transform.localPosition, m_MovementRange);
         Vector3 targetEulerAngles = model.transform.localEulerAngles;
         model.transform.localEulerAngles = new Vector3(Mathf.LerpAngle(targetEulerAngles.x, -axis.y * 45, 0.1f), targetEulerAngles.y, Mathf.LerpAngle(targetEulerAngles.z, -axis.x * 45, 0.1f));
     }

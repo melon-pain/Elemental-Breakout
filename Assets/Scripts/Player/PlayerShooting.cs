@@ -68,10 +68,7 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
             RechargeMana();
         }
 
-        if (m_Target)
-        {
-            this.transform.LookAt(m_Target.transform);
-        }
+        this.transform.LookAt(m_AimTarget.transform);
     }
 
     private void IntializeStats()
@@ -183,10 +180,13 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
         if (eventData.gameObject && m_WeaponType == WeaponType.Projectile)
         {
             m_AimTarget.transform.parent = eventData.gameObject.transform;
-            m_AimTarget.transform.localPosition = new Vector3(0.0f, 0.0f, -2.0f);
+            Debug.Log(this.transform.parent.name);
+            if (eventData.gameObject.GetComponent<BoxCollider>())
+                m_AimTarget.transform.localPosition = eventData.gameObject.GetComponent<BoxCollider>().center;
+            else
+                m_AimTarget.transform.localPosition = Vector3.zero; 
             m_AimTarget.transform.localRotation = Quaternion.identity;
             m_Target = eventData.gameObject;
-
         }
         else
         {

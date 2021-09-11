@@ -28,6 +28,10 @@ public class Boss_1 : MonoBehaviour
         player = FindObjectOfType<Player>();
         m_CurrentHP = m_MaxHP;
         StartCoroutine(Shoot());
+
+        AssetBundle bundle = assetBundleManager.LoadBundle("uibundle");
+        m_HPBarIcon.sprite = bundle.LoadAsset<Sprite>("T_Bar");
+        assetBundleManager.UnloadBundle("uibundle");
     }
 
     private void Update()
