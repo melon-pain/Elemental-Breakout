@@ -22,7 +22,6 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadSceneSingle(string sceneName)
     {
-        Debug.Log("OK");
         if (sceneName == string.Empty)
         {
             Debug.LogError($"Invalid name {sceneName == string.Empty}");

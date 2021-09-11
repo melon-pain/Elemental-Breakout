@@ -639,7 +639,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1132882084}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &906552725
 MonoBehaviour:
@@ -655,7 +655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Waves:
   - m_EnemyToSpawn: {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
-    m_Amount: 1
+    m_Amount: 5
     OnWaveFinished:
       m_PersistentCalls:
         m_Calls: []
@@ -738,11 +738,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 874972150}
+  - {fileID: 1380819594}
   - {fileID: 543450653362216262}
-  - {fileID: 906552724}
   - {fileID: 1166019411}
   - {fileID: 429145013}
-  - {fileID: 1380819594}
+  - {fileID: 906552724}
   - {fileID: 1589679967}
   - {fileID: 437224715}
   - {fileID: 388208699}
@@ -1139,7 +1139,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1132882084}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &1393431343 stripped
 MonoBehaviour:
@@ -2381,7 +2381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5279718684839395827, guid: 648bdbeeaf694e3499eca5a8b13f6d32, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5279718684839395827, guid: 648bdbeeaf694e3499eca5a8b13f6d32, type: 3}
       propertyPath: m_LocalPosition.x

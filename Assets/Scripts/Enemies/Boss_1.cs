@@ -19,6 +19,10 @@ public class Boss_1 : MonoBehaviour
     private bool isShooting = false;
     private Player player;
 
+    [Header("UI")]
+    [SerializeField] private AssetBundleManager assetBundleManager;
+    [SerializeField] private Image m_HPBarIcon;
+
     private void Start()
     {
         player = FindObjectOfType<Player>();

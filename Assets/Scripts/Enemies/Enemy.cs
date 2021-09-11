@@ -40,18 +40,22 @@ public class Enemy : MonoBehaviour, IDamage
 
         m_Body.material.SetColor("_BaseColor", m_BodyColors[(int)m_Element]);
         m_Core.material.SetColor("_BaseColor", m_CoreColors[(int)m_Element]);
-
-        Sprite[] icons = assetBundleManager.LoadBundle("uibundle").LoadAssetWithSubAssets<Sprite>("T_Enemy_Element");
-        m_ElementIcon.sprite = Array.Find<Sprite>(icons, item => item.name == "T_Enemy_Element_" + m_Element.ToString() );
-
-        m_HPBarIcon.sprite = assetBundleManager.GetAsset<Sprite>("uibundle", "T_Bar");
-        m_Indicator.sprite = assetBundleManager.GetAsset<Sprite>("uibundle", "T_Indicator");
-
+        
         player = FindObjectOfType<Player>();
         transform.LookAt(player.transform);
         OnDeath.AddListener(player.GetComponentInChildren<PlayerShooting>().RemoveLockOn);
 
         m_CurrentHP = m_MaxHP;
+
+        AssetBundle bundle = assetBundleManager.LoadBundle("uibundle");
+
+        Sprite[] icons = bundle.LoadAssetWithSubAssets<Sprite>("T_Enemy_Element");
+        m_ElementIcon.sprite = Array.Find<Sprite>(icons, item => item.name == "T_Enemy_Element_" + m_Element.ToString());
+
+        m_HPBarIcon.sprite = bundle.LoadAsset<Sprite>("T_Bar");
+        m_Indicator.sprite = bundle.LoadAsset<Sprite>("T_Indicator");
+
+        assetBundleManager.UnloadBundle("uibundle");
     }
 
     private void Update()
