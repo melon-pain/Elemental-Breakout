@@ -19633,7 +19633,7 @@ MonoBehaviour:
   model: {fileID: 861492688570172864}
   m_MoveSpeed: 10
   m_DodgeSpeed: 25
-  m_MovementRange: 20
+  m_MovementRange: 18
 --- !u!135 &3363113897450107506
 SphereCollider:
   m_ObjectHideFlags: 0
