@@ -766,6 +766,7 @@ MonoBehaviour:
   - {r: 0.9019608, g: 0.7396079, b: 0.09019604, a: 1}
   - {r: 0.16078429, g: 0.8, b: 0.3738563, a: 1}
   m_Animator: {fileID: 7939299653863910531}
+  enemy: {fileID: 7939299653863910529}
 --- !u!199 &7939299653739972148
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -1459,8 +1460,8 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 19
-    angle: 25
+    type: 4
+    angle: 3
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -1546,7 +1547,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.5
       mode: 0
       spread: 0
       speed:
@@ -5621,9 +5622,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Element: 1
+  m_RandomElement: 1
   m_MaxHP: 50
   m_CurrentHP: 100
   m_HPBar: {fileID: 1620944980183586169}
+  levelManager: {fileID: 0}
+  m_Score: 100
   m_Body: {fileID: 7939299654624243415}
   m_BodyColors:
   - {r: 0.9, g: 0.25058824, b: 0.091764696, a: 1}

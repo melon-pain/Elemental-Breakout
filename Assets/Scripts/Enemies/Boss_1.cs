@@ -48,9 +48,11 @@ public class Boss_1 : MonoBehaviour
         {
             isShooting = false;
             m_Projectiles.Stop();
+            m_Animator.SetBool("IsShooting", false);
             yield return new WaitForSeconds(Random.Range(4.0f, 8.0f));
             isShooting = true;
             m_Projectiles.Play();
+            m_Animator.SetBool("IsShooting", true);
             yield return new WaitForSeconds(Random.Range(2.0f, 4.0f));
         }
     }

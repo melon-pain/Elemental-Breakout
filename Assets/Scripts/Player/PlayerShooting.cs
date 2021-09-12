@@ -171,8 +171,11 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
 
     private void OnParticleCollision(GameObject other)
     {
-        IDamage damage = other.GetComponent<IDamage>();
-        damage.TakeDamage(m_Element, m_ProjectileDamage);
+        if (other.tag == "Enemy")
+        {
+            IDamage damage = other.GetComponent<IDamage>();
+            damage.TakeDamage(m_Element, m_ProjectileDamage);
+        }
     }
 
     public void LockOn (TapEventData eventData)

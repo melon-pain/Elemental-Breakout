@@ -12,7 +12,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private float m_TimeElapsed;
 
     [Header("Score")]
-    [SerializeField] private int m_Score = 0;
     [SerializeField] private TMP_Text m_ScoreText;
 
     [Header("Game Over")]
@@ -25,6 +24,11 @@ public class LevelManager : MonoBehaviour
     [Header("Upgrades")]
     [SerializeField] private Upgrades upgrades;
 
+    private void Start()
+    {
+        m_ScoreText.text = $"Score: <b>{level.score}</b>";
+    }
+
 
     private void FixedUpdate()
     {
@@ -33,8 +37,8 @@ public class LevelManager : MonoBehaviour
 
     public void AddScore(int amount)
     {
-        m_Score += amount;
-        m_ScoreText.text = $"Score: <b>{m_Score}</b>";
+        level.AddScore(amount);
+        m_ScoreText.text = $"Score: <b>{level.score}</b>";
     }
 
     public void PauseGame()
@@ -53,14 +57,11 @@ public class LevelManager : MonoBehaviour
         {
             if (m_TimeElapsed < 240.0f)
             {
-                m_Score += 1000;
+                level.AddScore(1000);
             }
 
-            level.SetHighScore(m_Score);
-            level.isFirstTime = false;
-            level.isCleared = true;
+            int funds = level.score / 10;
 
-            int funds = m_Score / 10;
             upgrades.AddCurrency(funds);
             m_TotalFundsText.text = funds.ToString();
 
@@ -69,12 +70,13 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
+            level.ResetScore();
             m_LevelClearText.text = "GAME OVER";
             m_ContinueButton.SetActive(false);
         }
 
         PauseGame();
         m_LevelClearScreen.SetActive(true);
-        m_TotalScoreText.text = m_Score.ToString();
+        m_TotalScoreText.text = level.score.ToString();
     }
 }
