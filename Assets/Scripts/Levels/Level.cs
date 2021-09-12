@@ -7,20 +7,16 @@ using UnityEngine;
 public class Level : ScriptableObject
 {
     [Header("Score")]
-    [SerializeField] private int m_HighScore = 0;
-    public bool isFirstTime { get => m_IsFirstTime; set => m_IsFirstTime = value; }
-    [SerializeField] private bool m_IsFirstTime = true;
-    public bool isCleared { get => m_IsCleared; set => m_IsCleared = value; }
-    [SerializeField] private bool m_IsCleared = false;
+    [SerializeField] private int m_Score = 0;
+    public int score { get => m_Score; }
 
-    public void SetHighScore (int newScore)
+    public void AddScore(int amount)
     {
-        if (newScore > m_HighScore)
-            m_HighScore = newScore;
+        m_Score += amount;
     }
 
-    public void SetClear(bool newClear)
+    public void ResetScore()
     {
-        m_IsCleared = newClear;
+        m_Score = 0;
     }
 }

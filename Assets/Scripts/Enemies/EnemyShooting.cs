@@ -13,11 +13,10 @@ public class EnemyShooting : MonoBehaviour
     [Header("Animator")]
     [SerializeField] private Animator m_Animator;
 
-    protected Enemy enemy;
+    [SerializeField] private Enemy enemy;
 
     private void Start()
     {
-        enemy = this.GetComponentInParent<Enemy>();
         m_Element = enemy.element;
         var main = m_Projectiles.main;
         main.startColor = m_ProjectileColors[(int)m_Element];
@@ -29,13 +28,15 @@ public class EnemyShooting : MonoBehaviour
         while (!enemy.isDead)
         {
             m_Projectiles.Stop();
-            m_Animator.SetBool("IsShooting", false);
+            if (m_Animator)
+                m_Animator.SetBool("IsShooting", false);
             yield return new WaitForSeconds(Random.Range(2.0f, 4.0f));
 
             if (enemy.isDead)
                 break;
             m_Projectiles.Play();
-            m_Animator.SetBool("IsShooting", true);
+            if (m_Animator)
+                m_Animator.SetBool("IsShooting", true);
             yield return new WaitForSeconds(Random.Range(1.0f, 2.0f));
         }
         yield break;

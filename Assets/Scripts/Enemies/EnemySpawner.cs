@@ -8,21 +8,23 @@ public class EnemySpawner: MonoBehaviour
     [System.Serializable]
     public class EnemyWave
     {
-        [SerializeField] private GameObject m_EnemyToSpawn;
-        [Range(1, 10), SerializeField] private int m_Amount;
+        [SerializeField] private List<GameObject> m_EnemiesToSpawn = new List<GameObject>();
+        [ReadOnlyInInspector, SerializeField] private int m_Amount;
         private List<GameObject> m_Enemies = new List<GameObject>();
         public UnityEvent OnWaveFinished = new UnityEvent();
 
         public void Instantiate(Transform parent)
         {
-            m_EnemyToSpawn.SetActive(false);
-            for (int i = 0; i < m_Amount; i++)
+            for (int i = 0; i < m_EnemiesToSpawn.Count; i++)
             {
-                GameObject enemy = GameObject.Instantiate(m_EnemyToSpawn, parent);
-                enemy.transform.localPosition = new Vector3(Mathf.Sin(i * 15.0f * (Random.Range(-1, 1) >= 0 ? 1 : -1)) * 15.0f, Mathf.Sin(i * 15.0f) * 5.0f, Random.Range(-1.0f, 1.0f));
+                m_EnemiesToSpawn[i].SetActive(false);
+                GameObject enemy = GameObject.Instantiate(m_EnemiesToSpawn[i], parent);
+                enemy.transform.localPosition = new Vector3(Mathf.Sin(i * 15.0f * (Random.Range(-1, 1) >= 0 ? 1 : -1)) * 20.0f, Mathf.Sin(i * 15.0f) * 5.0f, Random.Range(-1.0f, 1.0f));
                 m_Enemies.Add(enemy);
+                m_EnemiesToSpawn[i].SetActive(true);
             }
-            m_EnemyToSpawn.SetActive(true);
+
+            m_Amount = m_EnemiesToSpawn.Count;
         }
 
         public void SpawnWave()
@@ -44,16 +46,22 @@ public class EnemySpawner: MonoBehaviour
     }
 
     [SerializeField] private List<EnemyWave> m_Waves = new List<EnemyWave>();
-    private EnemyWave m_CurrentWave;
+    private int m_CurrentWave = 0;
 
     private void Start()
     {
         for (int i = 0; i < m_Waves.Count; i++)
         {
             m_Waves[i].Instantiate(this.transform);
-            m_Waves[i].OnWaveFinished.AddListener(delegate { m_CurrentWave = m_Waves[Mathf.Min(i + 1, m_Waves.Count - 1)]; m_CurrentWave.SpawnWave(); });
+            m_Waves[i].OnWaveFinished.AddListener(delegate { NextWave(); });
         }
-        m_CurrentWave = m_Waves[0];
-        m_CurrentWave.SpawnWave();
+        m_Waves[m_CurrentWave].SpawnWave();
+    }
+
+    private void NextWave()
+    {
+        m_CurrentWave++;
+        m_CurrentWave = Mathf.Min(m_CurrentWave, m_Waves.Count - 1);
+        m_Waves[m_CurrentWave].SpawnWave();
     }
 }
