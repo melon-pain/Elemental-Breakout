@@ -469,7 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: 5679018612346333473}
-  m_Element: 1
+  m_Element: 3
 --- !u!1 &3705998487790443009
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,7 +796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: 5679018612346333473}
-  m_Element: 3
+  m_Element: 1
 --- !u!1 &4759887572227332937
 GameObject:
   m_ObjectHideFlags: 0

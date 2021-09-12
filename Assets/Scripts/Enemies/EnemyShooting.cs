@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EnemyShooting : MonoBehaviour
 {
-    [Header("Element")]
-    [SerializeField] private Element m_Element;
     [Header("Projectile")]
     [SerializeField] private ParticleSystem m_Projectiles;
     [SerializeField] private float m_Damage = 5.0f;
@@ -17,9 +15,6 @@ public class EnemyShooting : MonoBehaviour
 
     private void Start()
     {
-        m_Element = enemy.element;
-        var main = m_Projectiles.main;
-        main.startColor = m_ProjectileColors[(int)m_Element];
         StartCoroutine(Shoot());
     }
 
@@ -34,6 +29,8 @@ public class EnemyShooting : MonoBehaviour
 
             if (enemy.isDead)
                 break;
+            var main = m_Projectiles.main;
+            main.startColor = m_ProjectileColors[(int)enemy.element];
             m_Projectiles.Play();
             if (m_Animator)
                 m_Animator.SetBool("IsShooting", true);
@@ -45,6 +42,6 @@ public class EnemyShooting : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         IDamage damage = other.GetComponent<IDamage>();
-        damage.TakeDamage(m_Element, m_Damage);
+        damage.TakeDamage(enemy.element, m_Damage);
     }
 }

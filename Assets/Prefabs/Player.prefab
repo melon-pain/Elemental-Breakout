@@ -4945,9 +4945,9 @@ MonoBehaviour:
   m_Projectiles: {fileID: 6826963024908893844}
   m_ProjectileColors:
   - {r: 0.9, g: 0.25058824, b: 0.091764696, a: 1}
-  - {r: 0.4509804, g: 0.7516341, b: 0.9019608, a: 1}
-  - {r: 0.9019608, g: 0.7396079, b: 0.09019604, a: 1}
   - {r: 0.16078429, g: 0.8, b: 0.3738563, a: 1}
+  - {r: 0.9019608, g: 0.7396079, b: 0.09019604, a: 1}
+  - {r: 0.4509804, g: 0.7516341, b: 0.9019608, a: 1}
   m_ProjectileDamage: 0
   m_ProjectileMPCost: 0
   m_ProjectileFireRate: 0

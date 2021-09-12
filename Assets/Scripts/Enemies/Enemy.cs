@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour, IDamage
     [SerializeField] private Element m_Element;
     public Element element { get => m_Element; }
     [SerializeField] private bool m_RandomElement = true;
+    [SerializeField] private bool m_ChangeElementOnHP = false;
 
     [Header("HP")]
     [SerializeField] private float m_MaxHP = 50.0f;
@@ -84,15 +85,36 @@ public class Enemy : MonoBehaviour, IDamage
             return;
         }
 
-        m_CurrentHP -= amount * Damage.GetModifier(attacking, m_Element);
+        float ratio = m_CurrentHP / m_MaxHP;
 
-        m_HPBar.UpdateBar(m_CurrentHP / m_MaxHP);
+        m_CurrentHP -= amount * Damage.GetModifier(attacking, m_Element);
+        m_HPBar.UpdateBar(ratio);
+
+        if (m_ChangeElementOnHP)
+        {
+            if (ratio > 0.75f)
+            {
+                ChangeElement(Element.Fire);
+            }
+            else if (ratio > 0.5f)
+            {
+                ChangeElement(Element.Wind);
+            }
+            else if (ratio > 0.25f)
+            {
+                ChangeElement(Element.Lightning);
+            }
+            else if (ratio > 0.0f)
+            {
+                ChangeElement(Element.Ice);
+            }
+        }
 
         if (m_CurrentHP <= 0.0f)
         {
             m_IsDead = true;
             OnDeath.Invoke();
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 
@@ -101,5 +123,17 @@ public class Enemy : MonoBehaviour, IDamage
         m_Element = newElement;
         m_Body.material.SetColor("_BaseColor", m_BodyColors[(int)m_Element]);
         m_Core.material.SetColor("_BaseColor", m_CoreColors[(int)m_Element]);
+
+        AssetBundle bundle = assetBundleManager.LoadBundle("uibundle");
+
+        Sprite[] icons = bundle.LoadAssetWithSubAssets<Sprite>("T_Enemy_Element");
+        m_ElementIcon.sprite = Array.Find<Sprite>(icons, item => item.name == "T_Enemy_Element_" + m_Element.ToString());
+
+        assetBundleManager.UnloadBundle("uibundle");
+    }
+
+    public void ResetScore()
+    {
+        m_Score = 0;
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyElementSwitcher : MonoBehaviour
 {
-    
     public enum SwitchType
     {
         HP,

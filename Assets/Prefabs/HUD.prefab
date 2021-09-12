@@ -1436,12 +1436,12 @@ MonoBehaviour:
   m_ShootButton: {fileID: 1853226451994762897}
   m_FireToggle: {fileID: 2849139668395084277}
   m_FireToggleActive: {fileID: 8406834095788556502}
-  m_IceToggle: {fileID: 1925686478019423788}
-  m_IceToggleActive: {fileID: 1334463923714400117}
+  m_IceToggle: {fileID: 5557862572902128682}
+  m_IceToggleActive: {fileID: 5342975913193625743}
   m_LightningToggle: {fileID: 7470515304946062622}
   m_LightningToggleActive: {fileID: 4103966578922751461}
-  m_WindToggle: {fileID: 5557862572902128682}
-  m_WindToggleActive: {fileID: 5342975913193625743}
+  m_WindToggle: {fileID: 1925686478019423788}
+  m_WindToggleActive: {fileID: 1334463923714400117}
 --- !u!1 &1853226452391500822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1693,7 +1693,7 @@ GameObject:
   - component: {fileID: 1925686478019423788}
   - component: {fileID: 2708039876083190564}
   m_Layer: 5
-  m_Name: Ice Toggle
+  m_Name: Wind Toggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2437,7 +2437,7 @@ GameObject:
   - component: {fileID: 5557862572902128682}
   - component: {fileID: 3361987669526237731}
   m_Layer: 5
-  m_Name: Wind Toggle
+  m_Name: Ice Toggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

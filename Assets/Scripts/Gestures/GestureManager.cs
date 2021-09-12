@@ -242,7 +242,6 @@ public class GestureManager : MonoBehaviour
             DragEventData dragEventData = new DragEventData(finger_1, hitObj);
             OnDrag.Invoke(dragEventData);
         }
-        hasGesture = true;
     }
 
     private void Pan()

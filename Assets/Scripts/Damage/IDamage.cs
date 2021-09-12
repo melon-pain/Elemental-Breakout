@@ -5,9 +5,9 @@ using UnityEngine;
 public enum Element 
 {
     Fire,
-    Ice,
+    Wind,
     Lightning,
-    Wind
+    Ice,
 };
 
 public interface IDamage
@@ -60,24 +60,24 @@ public partial class Damage
                 {
                     case Element.Fire:
                         return 0.5f;
-                    case Element.Ice:
+                    case Element.Wind:
                         return 0.5f;
                     case Element.Lightning:
                         return 1.0f;
-                    case Element.Wind:
+                    case Element.Ice:
                         return 2.0f;
                 }
                 break;
-            case Element.Ice:
+            case Element.Wind:
                 switch (defending)
                 {
                     case Element.Fire:
                         return 2.0f;
-                    case Element.Ice:
+                    case Element.Wind:
                         return 0.5f;
                     case Element.Lightning:
                         return 0.5f;
-                    case Element.Wind:
+                    case Element.Ice:
                         return 1.0f;
                 }
                 break;
@@ -86,24 +86,24 @@ public partial class Damage
                 {
                     case Element.Fire:
                         return 1.0f;
-                    case Element.Ice:
+                    case Element.Wind:
                         return 2.0f;
                     case Element.Lightning:
                         return 0.5f;
-                    case Element.Wind:
+                    case Element.Ice:
                         return 0.5f;
                 }
                 break;
-            case Element.Wind:
+            case Element.Ice:
                 switch (defending)
                 {
                     case Element.Fire:
                         return 0.5f;
-                    case Element.Ice:
+                    case Element.Wind:
                         return 1.0f;
                     case Element.Lightning:
                         return 2.0f;
-                    case Element.Wind:
+                    case Element.Ice:
                         return 0.5f;
                 }
                 break;
