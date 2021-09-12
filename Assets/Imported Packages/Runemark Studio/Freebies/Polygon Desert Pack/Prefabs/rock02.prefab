@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 471806}
   - component: {fileID: 3364546}
   - component: {fileID: 2348564}
+  - component: {fileID: 5526342157393391637}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -79,7 +80,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181648}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -112,3 +113,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!205 &5526342157393391637
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181648}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.16346467, y: 1.5717385, z: 0.23749447}
+  m_Size: 3.610699
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.10367128
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2348564}
+  m_Enabled: 1
