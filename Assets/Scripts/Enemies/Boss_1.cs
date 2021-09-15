@@ -22,6 +22,8 @@ public class Boss_1 : MonoBehaviour
     [Header("UI")]
     [SerializeField] private AssetBundleManager assetBundleManager;
     [SerializeField] private Image m_HPBarIcon;
+    [SerializeField] private Image m_HPBarRed;
+    [SerializeField] private Image m_HPBarOrange;
 
     private void Start()
     {

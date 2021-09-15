@@ -77,6 +77,5 @@ public class HUD : MonoBehaviour
         m_WindToggle.sprite = Array.Find(shootingSprites, item => item.name == "T_Wind_Toggle_Normal");
         m_WindToggleActive.sprite = Array.Find(shootingSprites, item => item.name == "T_Wind_Toggle_Active");
 
-        assetBundleManager.UnloadBundle("uibundle");
     }
 }

@@ -1,0 +1,59 @@
+ManifestFileVersion: 0
+CRC: 1626850710
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: bf1586b1351b3021056c8369e6a8c3f5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f64856a3d606b613608cbf22df470c60
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertBoxlarge.fbx
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertBoxFillerGreen.fbx
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertWindow.fbx
+- Assets/Imported Packages/Runemark Studio/Freebies/Polygon Desert Pack/Meshes/cactus2.fbx
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertBoxFillerRed.fbx
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertTower.fbx
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertLadder.fbx
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertCactus01.fbx
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertDoorLeft.fbx
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertBoxFillerYellow.fbx
+- Assets/Imported Packages/Runemark Studio/Freebies/Polygon Desert Pack/Meshes/rock06.obj
+- Assets/Imported Packages/Runemark Studio/Freebies/Polygon Desert Pack/Meshes/cactus3.fbx
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertPear.fbx
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertDoorRight.fbx
+- Assets/Imported Packages/Runemark Studio/Freebies/Polygon Desert Pack/Meshes/rock08.obj
+- Assets/Imported Packages/Runemark Studio/Freebies/Polygon Desert Pack/Meshes/rock07.obj
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertCastle.fbx
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertCactus02.fbx
+- Assets/Imported Packages/Runemark Studio/Freebies/Polygon Desert Pack/Meshes/cactus1.fbx
+- Assets/Imported Packages/Runemark Studio/Freebies/Polygon Desert Pack/Meshes/aloe.fbx
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertBrazzier.fbx
+- Assets/Imported Packages/Runemark Studio/Freebies/Polygon Desert Pack/Meshes/rock05.obj
+- Assets/Imported Packages/Runemark Studio/Freebies/Polygon Desert Pack/Meshes/rock04.obj
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertBoxSmall.fbx
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertLadderExtra.fbx
+- Assets/Imported Packages/Runemark Studio/Freebies/Polygon Desert Pack/Meshes/rock01.obj
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertChestBottom.fbx
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertBoxFillerBlue.fbx
+- Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertCowSkull.fbx
+- Assets/Imported Packages/Runemark Studio/Freebies/Polygon Desert Pack/Meshes/rock03.obj
+- Assets/Imported Packages/Runemark Studio/Freebies/Polygon Desert Pack/Meshes/rock02.obj
+Dependencies: []

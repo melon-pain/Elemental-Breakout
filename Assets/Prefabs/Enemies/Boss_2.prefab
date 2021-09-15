@@ -110,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2551983543529225686}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3323815917447976897}
@@ -168,9 +168,11 @@ MonoBehaviour:
   m_Element: 0
   m_RandomElement: 0
   m_ChangeElementOnHP: 1
+  m_ChangeElementOnTime: 0
   m_MaxHP: 500
   m_CurrentHP: 50
   m_HPBar: {fileID: 3434872481326729691}
+  m_TurnSpeed: 0.75
   levelManager: {fileID: 0}
   m_Score: 100
   m_Body: {fileID: 4249121649771261597}
@@ -188,6 +190,8 @@ MonoBehaviour:
   assetBundleManager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
   m_ElementIcon: {fileID: 3434872482244940292}
   m_HPBarIcon: {fileID: 3434872481326729689}
+  m_HPBarRed: {fileID: 3434872482288028055}
+  m_HPBarOrange: {fileID: 3434872480703533213}
   m_Indicator: {fileID: 3434872481396354746}
   OnDeath:
     m_PersistentCalls:
@@ -204,7 +208,7 @@ GameObject:
   - component: {fileID: 3434872480703533214}
   - component: {fileID: 3434872480703533213}
   m_Layer: 5
-  m_Name: HP Bar
+  m_Name: HP Bar Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -250,14 +254,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.3764706, b: 0.34509805, a: 1}
+  m_Color: {r: 1, g: 0.4509804, b: 0.2509804, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b61c16a4618c71f4baeb053c922d3426, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -314,7 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Projectiles: {fileID: 3434872480770756922}
-  m_Damage: 5
+  m_Damage: 10
   m_ProjectileColors:
   - {r: 0.9, g: 0.25058824, b: 0.091764696, a: 1}
   - {r: 0.16078429, g: 0.8, b: 0.3738563, a: 1}
@@ -330,7 +334,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3434872480770756919}
   serializedVersion: 7
-  lengthInSec: 0.15
+  lengthInSec: 0.1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -1164,7 +1168,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 50
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5368,7 +5372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b61c16a4618c71f4baeb053c922d3426, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5690,7 +5694,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b61c16a4618c71f4baeb053c922d3426, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
