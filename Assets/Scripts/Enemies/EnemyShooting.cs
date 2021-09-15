@@ -42,6 +42,11 @@ public class EnemyShooting : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         IDamage damage = other.GetComponent<IDamage>();
-        damage.TakeDamage(enemy.element, m_Damage);
+        if (damage != null)
+            damage.TakeDamage(enemy.element, m_Damage);
+        else
+        {
+            Debug.Log("No damage?");
+        }
     }
 }
