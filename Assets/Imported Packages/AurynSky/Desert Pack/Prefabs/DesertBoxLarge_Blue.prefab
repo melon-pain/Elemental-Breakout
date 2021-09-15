@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33814370885608688}
   - component: {fileID: 23538452727365454}
   - component: {fileID: 6050829983602228335}
+  - component: {fileID: 7983627686145609334}
   m_Layer: 0
   m_Name: DesertBoxLarge_Blue
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1141854476560308}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -42.93, y: 15.106, z: 34.874}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.37484565, y: 0.37484562, z: 0.37484574}
   m_Children:
   - {fileID: 4535482276516322}
   m_Father: {fileID: 0}
@@ -41,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141854476560308}
-  m_Mesh: {fileID: 4300000, guid: 2b4b51f609cfb024ba0f1ffc36943c3a, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!23 &23538452727365454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -103,6 +104,21 @@ LODGroup:
     - renderer: {fileID: 23538452727365454}
     - renderer: {fileID: 23215882005869848}
   m_Enabled: 1
+--- !u!114 &7983627686145609334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141854476560308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f2a70591cd37f4986e1eef184c1e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  bundleName: desertbundle
+  assetName: DesertBoxlarge
 --- !u!1 &1288911198079780
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,6 +130,7 @@ GameObject:
   - component: {fileID: 4535482276516322}
   - component: {fileID: 33762943042590794}
   - component: {fileID: 23215882005869848}
+  - component: {fileID: 699824340538198345}
   m_Layer: 0
   m_Name: DesertBoxFillerBlue
   m_TagString: Untagged
@@ -142,7 +159,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288911198079780}
-  m_Mesh: {fileID: 4300000, guid: 50485a96d556be84e9ff165441c6da6f, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!23 &23215882005869848
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -162,7 +179,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 50485a96d556be84e9ff165441c6da6f, type: 3}
+  - {fileID: 2100000, guid: 81f52d79120604d4fb0609b14e9ffe15, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -184,3 +201,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &699824340538198345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288911198079780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f2a70591cd37f4986e1eef184c1e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  bundleName: desertbundle
+  assetName: DesertBoxFillerBlue

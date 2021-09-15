@@ -1,7 +1,10 @@
 ManifestFileVersion: 0
-CRC: 2152427974
+CRC: 2684239878
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: uibundle
+      Dependencies: {}
+    Info_1:
+      Name: desertbundle
       Dependencies: {}

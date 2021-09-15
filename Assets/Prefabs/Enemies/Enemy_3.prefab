@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 6951574108358473654}
   - component: {fileID: 5208061985566830606}
   m_Layer: 5
-  m_Name: HP Bar
+  m_Name: HP Bar Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,14 +214,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.3764706, b: 0.34509805, a: 1}
+  m_Color: {r: 1, g: 0.4509804, b: 0.2509804, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b61c16a4618c71f4baeb053c922d3426, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b61c16a4618c71f4baeb053c922d3426, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b61c16a4618c71f4baeb053c922d3426, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5740,6 +5740,8 @@ MonoBehaviour:
   assetBundleManager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
   m_ElementIcon: {fileID: 8419381414910552792}
   m_HPBarIcon: {fileID: 381950392753215574}
+  m_HPBarRed: {fileID: 5213436991856114935}
+  m_HPBarOrange: {fileID: 5208061985566830606}
   m_Indicator: {fileID: 4641790029217257716}
   OnDeath:
     m_PersistentCalls:

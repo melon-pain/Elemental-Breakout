@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33037899846167288}
   - component: {fileID: 23075168155042152}
   - component: {fileID: 4372043263099564655}
+  - component: {fileID: 8922399695128062515}
   m_Layer: 0
   m_Name: DesertCactus02
   m_TagString: Untagged
@@ -40,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849534088583780}
-  m_Mesh: {fileID: 4300000, guid: 5091909aabc8480429db3a0419f90edf, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!23 &23075168155042152
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -101,3 +102,20 @@ LODGroup:
     renderers:
     - renderer: {fileID: 23075168155042152}
   m_Enabled: 1
+--- !u!114 &8922399695128062515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849534088583780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f2a70591cd37f4986e1eef184c1e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  bundleName: desertbundle
+  assetName: DesertCactus02
+  subAssetName: 
+  isMultiple: 0

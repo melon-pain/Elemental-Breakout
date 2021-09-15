@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 6951574108358473654}
   - component: {fileID: 5208061985566830606}
   m_Layer: 5
-  m_Name: HP Bar
+  m_Name: HP Bar Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,14 +214,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.3764706, b: 0.34509805, a: 1}
+  m_Color: {r: 1, g: 0.4509804, b: 0.2509804, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b61c16a4618c71f4baeb053c922d3426, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b61c16a4618c71f4baeb053c922d3426, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b61c16a4618c71f4baeb053c922d3426, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -761,9 +761,9 @@ MonoBehaviour:
   m_Damage: 10
   m_ProjectileColors:
   - {r: 0.9, g: 0.25058824, b: 0.091764696, a: 1}
-  - {r: 0.4509804, g: 0.7516341, b: 0.9019608, a: 1}
-  - {r: 0.9019608, g: 0.7396079, b: 0.09019604, a: 1}
   - {r: 0.16078429, g: 0.8, b: 0.3738563, a: 1}
+  - {r: 0.9019608, g: 0.7396079, b: 0.09019604, a: 1}
+  - {r: 0.4509804, g: 0.7516341, b: 0.9019608, a: 1}
   m_Animator: {fileID: 7939299653863910531}
   enemy: {fileID: 7939299653863910529}
 --- !u!199 &7939299653739972148
@@ -1459,8 +1459,8 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
-    angle: 3
+    type: 19
+    angle: 1
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -4583,7 +4583,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 65
+      m_Bits: 64
     maxCollisionShapes: 1
     quality: 0
     voxelSize: 0.5
@@ -5643,6 +5643,8 @@ MonoBehaviour:
   assetBundleManager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
   m_ElementIcon: {fileID: 8419381414910552792}
   m_HPBarIcon: {fileID: 381950392753215574}
+  m_HPBarRed: {fileID: 5213436991856114935}
+  m_HPBarOrange: {fileID: 5208061985566830606}
   m_Indicator: {fileID: 4641790029217257716}
   OnDeath:
     m_PersistentCalls:

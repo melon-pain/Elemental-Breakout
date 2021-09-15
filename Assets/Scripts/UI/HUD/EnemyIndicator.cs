@@ -14,6 +14,8 @@ public class EnemyIndicator : MonoBehaviour
     private Vector3 maxPosition;
     private void Start()
     {
+        if (!m_Follow)
+            return;
         rectTransform = this.GetComponent<RectTransform>();
         rend = m_Follow.GetComponent<Renderer>();
         minPosition = parentRectTransform.rect.min - this.GetComponent<RectTransform>().rect.min;
@@ -23,12 +25,14 @@ public class EnemyIndicator : MonoBehaviour
 
     private void Update()
     {
+        if (!m_Follow)
+            return;
         if (!rend.isVisible)
         {
             m_Image.enabled = true;
             Vector3 worldToScreen = Camera.main.WorldToScreenPoint(m_Follow.transform.position);
-            worldToScreen.x = Mathf.Clamp(worldToScreen.x, rectTransform.rect.width / 2, Screen.width - rectTransform.rect.width / 2);
-            worldToScreen.y = Mathf.Clamp(worldToScreen.y, rectTransform.rect.height / 2, Screen.height - rectTransform.rect.height / 2);
+            worldToScreen.x = Mathf.Clamp(worldToScreen.x, (rectTransform.rect.width / 2) * 0.8f, (Screen.width - rectTransform.rect.width / 2) * 0.8f);
+            worldToScreen.y = Mathf.Clamp(worldToScreen.y, (rectTransform.rect.height / 2) * 0.8f, (Screen.height - rectTransform.rect.height / 2) * 0.8f );
 
             Vector3 angle = worldToScreen - new Vector3(Screen.width / 2, Screen.height / 2, 0.0f);
             this.transform.position = worldToScreen;

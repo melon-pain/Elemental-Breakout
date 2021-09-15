@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 3319116}
   - component: {fileID: 2352658}
   - component: {fileID: 3152490957115580187}
+  - component: {fileID: 8877013107227965604}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -71,7 +72,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185874}
-  m_Mesh: {fileID: 4300000, guid: e44f8bbf9778c484ca4d63d534614d67, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!23 &2352658
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -127,8 +128,23 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.25010017
+  - screenRelativeHeight: 0.09789745
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 2352658}
   m_Enabled: 1
+--- !u!114 &8877013107227965604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f2a70591cd37f4986e1eef184c1e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  bundleName: desertbundle
+  assetName: aloe

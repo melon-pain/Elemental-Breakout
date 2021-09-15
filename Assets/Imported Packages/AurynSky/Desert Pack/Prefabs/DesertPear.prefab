@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33470154673946894}
   - component: {fileID: 23690010002661302}
   - component: {fileID: -1313798006827042506}
+  - component: {fileID: 1979638803934589027}
   m_Layer: 0
   m_Name: DesertPear
   m_TagString: Untagged
@@ -40,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114081256727678}
-  m_Mesh: {fileID: 4300000, guid: 59b4286292368fe4783ca427f507a5d3, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!23 &23690010002661302
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -101,3 +102,20 @@ LODGroup:
     renderers:
     - renderer: {fileID: 23690010002661302}
   m_Enabled: 1
+--- !u!114 &1979638803934589027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114081256727678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f2a70591cd37f4986e1eef184c1e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  bundleName: desertbundle
+  assetName: DesertPear
+  subAssetName: 
+  isMultiple: 0

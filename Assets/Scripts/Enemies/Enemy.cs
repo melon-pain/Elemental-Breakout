@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour, IDamage
     public Element element { get => m_Element; }
     [SerializeField] private bool m_RandomElement = true;
     [SerializeField] private bool m_ChangeElementOnHP = false;
+    [SerializeField] private bool m_ChangeElementOnTime = false;
 
     [Header("HP")]
     [SerializeField] private float m_MaxHP = 50.0f;
@@ -19,6 +20,8 @@ public class Enemy : MonoBehaviour, IDamage
     [ReadOnlyInInspector, SerializeField] private float m_CurrentHP = 50.0f;
     public float currentHP { get => m_CurrentHP; }
     [SerializeField] private Bar m_HPBar;
+
+    [SerializeField] private float m_TurnSpeed = 15.0f;
 
     [Header("Score")]
     [SerializeField] private LevelManager levelManager;
@@ -36,6 +39,8 @@ public class Enemy : MonoBehaviour, IDamage
     [SerializeField] private AssetBundleManager assetBundleManager;
     [SerializeField] private Image m_ElementIcon;
     [SerializeField] private Image m_HPBarIcon;
+    [SerializeField] private Image m_HPBarRed;
+    [SerializeField] private Image m_HPBarOrange;
     [SerializeField] private Image m_Indicator;
 
     public bool isDead { get => m_IsDead; }
@@ -64,18 +69,21 @@ public class Enemy : MonoBehaviour, IDamage
         m_ElementIcon.sprite = Array.Find<Sprite>(icons, item => item.name == "T_Enemy_Element_" + m_Element.ToString());
 
         m_HPBarIcon.sprite = bundle.LoadAsset<Sprite>("T_Bar");
+        m_HPBarRed.sprite = bundle.LoadAsset<Sprite>("T_Bar");
+        m_HPBarOrange.sprite = bundle.LoadAsset<Sprite>("T_Bar");
         m_Indicator.sprite = bundle.LoadAsset<Sprite>("T_Indicator");
-
-        assetBundleManager.UnloadBundle("uibundle");
 
         levelManager = FindObjectOfType<LevelManager>();
         OnDeath.AddListener(delegate { levelManager.AddScore(m_Score);  } );
+
+        if (m_ChangeElementOnTime)
+            StartCoroutine(ChangeElementOnTime());
     }
 
     private void Update()
     {
         if (!m_IsDead)
-            transform.rotation = Quaternion.RotateTowards(this.transform.rotation, Quaternion.LookRotation(player.transform.position - transform.position), 15.0f);
+            transform.rotation = Quaternion.RotateTowards(this.transform.rotation, Quaternion.LookRotation(player.transform.position - transform.position), m_TurnSpeed);
     }
     
     public void TakeDamage(Element attacking, float amount)
@@ -135,5 +143,15 @@ public class Enemy : MonoBehaviour, IDamage
     public void ResetScore()
     {
         m_Score = 0;
+    }
+
+    private IEnumerator ChangeElementOnTime()
+    {
+        while (!m_IsDead)
+        {
+            ChangeElement((Element)UnityEngine.Random.Range(0, 4));
+            yield return new WaitForSeconds(5.0f);
+        }
+        yield break;
     }
 }
