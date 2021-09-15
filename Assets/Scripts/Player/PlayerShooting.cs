@@ -122,7 +122,10 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
                     if (Physics.SphereCast(r, 1.0f, out hit, 100.0f, LayerMask.GetMask("Enemy"), QueryTriggerInteraction.Ignore))
                     {
                         IDamage damage = hit.collider.GetComponent<IDamage>();
-                        damage.TakeDamage(m_Element, m_BeamDamage);
+                        if (damage != null)
+                            damage.TakeDamage(m_Element, m_BeamDamage);
+                        else
+                            Debug.Log("No beam damage?");
                         m_BeamHit.transform.position = hit.point;
                         m_BeamHit.Play();
                     }
