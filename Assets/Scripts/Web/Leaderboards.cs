@@ -15,6 +15,11 @@ public class Leaderboards : MonoBehaviour
     [SerializeField] private UnityEvent OnLeaderboardOpen;
     [SerializeField] private UnityEvent OnLeaderboardClose;
 
+    public string BaseURL
+    {
+        get { return "https://my-user-scoreboard.herokuapp.com/api/"; }
+    }
+
     public void OnEnable()
     {
         if (Application.internetReachability != NetworkReachability.NotReachable)
@@ -30,11 +35,6 @@ public class Leaderboards : MonoBehaviour
         {
             OnLeaderboardClose.Invoke();
         }
-    }
-
-    public string BaseURL
-    {
-        get { return "https://my-user-scoreboard.herokuapp.com/api/"; }
     }
 
     public void GetAllScores()
