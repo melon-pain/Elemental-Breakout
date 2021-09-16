@@ -22,6 +22,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private TMP_Text m_TotalScoreText;
     [SerializeField] private TMP_Text m_TotalFundsText;
     [SerializeField] private GameObject m_ContinueButton;
+    [SerializeField] private UserScoreSubmit m_UserScoreSubmit;
     [SerializeField] private UnityEvent OnLevelClear;
     [SerializeField] private UnityEvent OnGameOver;
 
@@ -86,5 +87,6 @@ public class LevelManager : MonoBehaviour
         PauseGame();
         m_LevelClearScreen.SetActive(true);
         m_TotalScoreText.text = level.score.ToString();
+        m_UserScoreSubmit.userScore = level.score;
     }
 }
