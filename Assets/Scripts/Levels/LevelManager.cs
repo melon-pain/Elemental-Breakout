@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+
 using TMPro;
 
 public class LevelManager : MonoBehaviour
@@ -20,6 +22,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private TMP_Text m_TotalScoreText;
     [SerializeField] private TMP_Text m_TotalFundsText;
     [SerializeField] private GameObject m_ContinueButton;
+    [SerializeField] private UnityEvent OnLevelClear;
+    [SerializeField] private UnityEvent OnGameOver;
 
     [Header("Upgrades")]
     [SerializeField] private Upgrades upgrades;
@@ -67,12 +71,16 @@ public class LevelManager : MonoBehaviour
 
             m_LevelClearText.text = "LEVEL CLEAR";
             m_ContinueButton.SetActive(true);
+
+            OnLevelClear.Invoke();
         }
         else
         {
             level.ResetScore();
             m_LevelClearText.text = "GAME OVER";
             m_ContinueButton.SetActive(false);
+
+            OnGameOver.Invoke();
         }
 
         PauseGame();

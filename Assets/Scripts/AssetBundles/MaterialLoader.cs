@@ -46,7 +46,7 @@ public class MaterialLoader : MonoBehaviour
                 yield return null;
             }
             Material mat = materialReq.asset as Material;
-            Debug.Log(mat);
+            //Debug.Log(mat);
             mat.shader = Shader.Find(shaderName);
             mats[i] = mat;
         }
