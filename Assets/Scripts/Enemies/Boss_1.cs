@@ -35,7 +35,6 @@ public class Boss_1 : MonoBehaviour
         m_HPBarIcon.sprite = bundle.LoadAsset<Sprite>("T_Bar");
         m_HPBarRed.sprite = bundle.LoadAsset<Sprite>("T_Bar");
         m_HPBarOrange.sprite = bundle.LoadAsset<Sprite>("T_Bar");
-        assetBundleManager.UnloadBundle("uibundle");
 
         OnDeath.AddListener(player.GetComponentInChildren<PlayerShooting>().RemoveLockOn);
     }

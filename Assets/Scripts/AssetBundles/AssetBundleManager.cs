@@ -19,18 +19,22 @@ public class AssetBundleManager : ScriptableObject
     }
 
     private Dictionary<string, AssetBundle> loadedBundles = new Dictionary<string, AssetBundle>();
-
+    
     public void Awake()
     {
-        //loadedBundles.Clear();
+
     }
 
     public AssetBundle LoadBundle(string bundleName)
     {
         if (loadedBundles.ContainsKey(bundleName))
+        {
+            Debug.Log("Return existing");
             return loadedBundles[bundleName];
+        }
         else
         {
+            Debug.Log(loadedBundles.Keys.Count);
             AssetBundle bundle = AssetBundle.LoadFromFile(Path.Combine(bundlesRootPath, bundleName));
             if (bundle)
             {
@@ -48,31 +52,8 @@ public class AssetBundleManager : ScriptableObject
         loadedBundles.Remove(bundleName);
     }
 
-    public T GetAsset<T>(string bundleName, string assetName) where T : Object
+    public void UnloadAllBundles()
     {
-        T ret = null;
-
-        AssetBundle bundle = LoadBundle(bundleName);
-
-        if (bundle != null)
-        {
-            ret = bundle.LoadAsset<T>(assetName);
-        }
-
-        return ret;
-    }
-
-    public T[] GetAssetsWithSubAssets<T>(string bundleName, string assetName) where T : Object
-    {
-        T[] ret = null;
-
-        AssetBundle bundle = LoadBundle(bundleName);
-
-        if (bundle != null)
-        {
-            ret =  bundle.LoadAssetWithSubAssets<T>(assetName);
-        }
-
-        return ret;
+        AssetBundle.UnloadAllAssetBundles(true);
     }
 }
