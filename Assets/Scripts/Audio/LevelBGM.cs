@@ -14,7 +14,7 @@ public class LevelBGM : MonoBehaviour
         audioSource.Play();
     }
 
-    public void PlayBossBGM(AudioClip clip)
+    public void PlayBGM(AudioClip clip)
     {
         audioSource.clip = clip;
         audioSource.Play();
