@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private float m_TimeElapsed;
 
     [Header("Score")]
+    [SerializeField] private int m_levelScore;
     [SerializeField] private TMP_Text m_ScoreText;
 
     [Header("Game Over")]
@@ -31,7 +32,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        m_ScoreText.text = $"Score: <b>{level.score}</b>";
+        m_ScoreText.text = $"Score: <b>{level.score + m_levelScore}</b>";
     }
 
 
@@ -42,8 +43,8 @@ public class LevelManager : MonoBehaviour
 
     public void AddScore(int amount)
     {
-        level.AddScore(amount);
-        m_ScoreText.text = $"Score: <b>{level.score}</b>";
+        m_levelScore += amount;
+        m_ScoreText.text = $"Score: <b>{level.score + m_levelScore}</b>";
     }
 
     public void PauseGame()
@@ -58,6 +59,8 @@ public class LevelManager : MonoBehaviour
 
     public void GameOver(bool isFinished)
     {
+        level.AddScore(m_levelScore);
+
         if (isFinished)
         {
             if (m_TimeElapsed < 240.0f)
