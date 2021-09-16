@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4320346756413276}
   - component: {fileID: 33551163544024564}
   - component: {fileID: 23391551815532164}
+  - component: {fileID: 8443507165869766397}
   - component: {fileID: 164183388788963485}
   m_Layer: 0
   m_Name: DesertBoxFillerYellow
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 81f52d79120604d4fb0609b14e9ffe15, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,6 +83,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8443507165869766397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518809398757050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: ColorPaletteNOTEAM
+  shaderName: Universal Render Pipeline/Lit
 --- !u!114 &164183388788963485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,6 +115,8 @@ MonoBehaviour:
   manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
   bundleName: desertbundle
   assetName: DesertBoxFillerYellow
+  subAssetName: 
+  isMultiple: 0
 --- !u!1 &1791388342252440
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +129,7 @@ GameObject:
   - component: {fileID: 33566887451327390}
   - component: {fileID: 23030112769153638}
   - component: {fileID: 4407667283632990617}
+  - component: {fileID: 588120606685496609}
   - component: {fileID: 6412151222613344831}
   m_Layer: 0
   m_Name: DesertBoxSmall_Yellow
@@ -159,7 +180,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 81f52d79120604d4fb0609b14e9ffe15, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -195,12 +216,29 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.103378706
+  - screenRelativeHeight: 0.04815952
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23030112769153638}
     - renderer: {fileID: 23391551815532164}
   m_Enabled: 1
+--- !u!114 &588120606685496609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791388342252440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: ColorPaletteNOTEAM
+  shaderName: Universal Render Pipeline/Lit
 --- !u!114 &6412151222613344831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,3 +254,5 @@ MonoBehaviour:
   manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
   bundleName: desertbundle
   assetName: DesertBoxSmall
+  subAssetName: 
+  isMultiple: 0

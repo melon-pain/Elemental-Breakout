@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33216646922858362}
   - component: {fileID: 23250238314883536}
   - component: {fileID: 1139816275084985039}
+  - component: {fileID: 1363783209262915877}
   m_Layer: 0
   m_Name: DesertLadderExtra
   m_TagString: Untagged
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a68b38832a101144bb4fd9a1aa0f1425, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,6 +100,25 @@ MonoBehaviour:
   assetName: DesertLadderExtra
   subAssetName: 
   isMultiple: 0
+--- !u!114 &1363783209262915877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446075256677104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: ColorPaletteRED
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
+  isMultiple: 0
 --- !u!1 &1818830643651148
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,6 +132,7 @@ GameObject:
   - component: {fileID: 23848089985818228}
   - component: {fileID: 3569689055258620497}
   - component: {fileID: 4135052934451348106}
+  - component: {fileID: 2190605879091283853}
   m_Layer: 0
   m_Name: DesertTower_Red
   m_TagString: Untagged
@@ -163,7 +184,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a68b38832a101144bb4fd9a1aa0f1425, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -224,6 +245,25 @@ MonoBehaviour:
   assetName: DesertTower
   subAssetName: 
   isMultiple: 0
+--- !u!114 &2190605879091283853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818830643651148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: ColorPaletteRED
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
+  isMultiple: 0
 --- !u!1 &1916136043511990
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +276,7 @@ GameObject:
   - component: {fileID: 33598712728143664}
   - component: {fileID: 23843927218689404}
   - component: {fileID: 2280473985914072037}
+  - component: {fileID: 7762703566527845218}
   m_Layer: 0
   m_Name: DesertLadder
   m_TagString: Untagged
@@ -284,7 +325,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a68b38832a101144bb4fd9a1aa0f1425, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -323,6 +364,25 @@ MonoBehaviour:
   assetName: DesertLadder
   subAssetName: 
   isMultiple: 0
+--- !u!114 &7762703566527845218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916136043511990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: ColorPaletteRED
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
+  isMultiple: 0
 --- !u!1 &1925117562307424
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,6 +395,7 @@ GameObject:
   - component: {fileID: 33083618979992704}
   - component: {fileID: 23456951513667188}
   - component: {fileID: 8686128778173355254}
+  - component: {fileID: 7716135305375338432}
   m_Layer: 0
   m_Name: DesertLadder
   m_TagString: Untagged
@@ -383,7 +444,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a68b38832a101144bb4fd9a1aa0f1425, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -421,4 +482,23 @@ MonoBehaviour:
   bundleName: desertbundle
   assetName: DesertLadder
   subAssetName: 
+  isMultiple: 0
+--- !u!114 &7716135305375338432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925117562307424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: ColorPaletteRED
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
   isMultiple: 0

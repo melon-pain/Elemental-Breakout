@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33470154673946894}
   - component: {fileID: 23690010002661302}
   - component: {fileID: -1313798006827042506}
+  - component: {fileID: 2501434532620684479}
   - component: {fileID: 1979638803934589027}
   m_Layer: 0
   m_Name: DesertPear
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1ec2e18e91ff6354baa4f9df6999904a, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,11 +98,28 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.09507195
+  - screenRelativeHeight: 0.04815952
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23690010002661302}
   m_Enabled: 1
+--- !u!114 &2501434532620684479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114081256727678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: ColorPaletteBLUE
+  shaderName: Universal Render Pipeline/Lit
 --- !u!114 &1979638803934589027
 MonoBehaviour:
   m_ObjectHideFlags: 0

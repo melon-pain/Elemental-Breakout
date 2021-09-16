@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1626850710
+CRC: 2498702505
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: bf1586b1351b3021056c8369e6a8c3f5
+    Hash: 3bbe4c6e7ff414ff0a78930c41182e80
   TypeTreeHash:
     serializedVersion: 2
     Hash: f64856a3d606b613608cbf22df470c60
@@ -56,4 +56,5 @@ Assets:
 - Assets/Imported Packages/AurynSky/Desert Pack/Models/DesertCowSkull.fbx
 - Assets/Imported Packages/Runemark Studio/Freebies/Polygon Desert Pack/Meshes/rock03.obj
 - Assets/Imported Packages/Runemark Studio/Freebies/Polygon Desert Pack/Meshes/rock02.obj
-Dependencies: []
+Dependencies:
+- C:/Users/melon/source/Repos/Elemental-Breakout/AssetBundles/Android/desertmaterialbundle

@@ -40,6 +40,10 @@ public class MeshLoader : MonoBehaviour
         {
             yield return null;
         }
+        UnityEngine.Object[] assets = req.allAssets;
+
+        this.GetComponent<MeshFilter>().mesh = Array.Find(assets, item => item.name == subAssetName) as Mesh;
+
         yield break;
     }
 
@@ -55,7 +59,7 @@ public class MeshLoader : MonoBehaviour
         }
 
         this.GetComponent<MeshFilter>().mesh = req.asset as Mesh;
-        //manager.UnloadBundle(bundleName);
+
         yield break;
     }
 }

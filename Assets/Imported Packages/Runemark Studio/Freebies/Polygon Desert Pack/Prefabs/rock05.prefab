@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2342516}
   - component: {fileID: 8552606956688210282}
   - component: {fileID: 1893417977696841156}
+  - component: {fileID: 8348234599514359894}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: df64b2ddea7920a40962d7aac24b2869, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,7 +98,7 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.101963416
+  - screenRelativeHeight: 0.04519582
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 2342516}
@@ -118,6 +119,25 @@ MonoBehaviour:
   bundleName: desertbundle
   assetName: rock05
   subAssetName: 
+  isMultiple: 0
+--- !u!114 &8348234599514359894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: DesertRocks
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
   isMultiple: 0
 --- !u!1 &175310
 GameObject:

@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2684239878
+CRC: 195043663
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -7,4 +7,12 @@ AssetBundleManifest:
       Dependencies: {}
     Info_1:
       Name: desertbundle
+      Dependencies:
+        Dependency_0: desertmaterialbundle
+    Info_2:
+      Name: desertmaterialbundle
+      Dependencies:
+        Dependency_0: deserttexturebundle
+    Info_3:
+      Name: deserttexturebundle
       Dependencies: {}

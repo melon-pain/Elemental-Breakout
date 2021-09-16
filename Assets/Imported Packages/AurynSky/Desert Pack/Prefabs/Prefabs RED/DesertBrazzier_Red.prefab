@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23822187096909358}
   - component: {fileID: 1811000288874187928}
   - component: {fileID: 1714517130631520758}
+  - component: {fileID: 8258931063163579231}
   m_Layer: 0
   m_Name: DesertBrazzier_Red
   m_TagString: Untagged
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a68b38832a101144bb4fd9a1aa0f1425, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,7 +100,7 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.10055779
+  - screenRelativeHeight: 0.05225444
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23822187096909358}
@@ -122,6 +123,25 @@ MonoBehaviour:
   bundleName: desertbundle
   assetName: DesertBrazzier
   subAssetName: 
+  isMultiple: 0
+--- !u!114 &8258931063163579231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153673260404766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: ColorPaletteRED
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
   isMultiple: 0
 --- !u!1 &1829042895174398
 GameObject:
@@ -4894,7 +4914,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 1d13699a40edd244080be7667d805d4d, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

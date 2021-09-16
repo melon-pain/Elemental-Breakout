@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33446887057419178}
   - component: {fileID: 23324454386233448}
   - component: {fileID: 4563735190718683938}
+  - component: {fileID: 3893132101495457040}
   - component: {fileID: 4356669514193528123}
   m_Layer: 0
   m_Name: DesertBoxlarge_Empty
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 81f52d79120604d4fb0609b14e9ffe15, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,11 +98,28 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.10055779
+  - screenRelativeHeight: 0.049167894
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23324454386233448}
   m_Enabled: 1
+--- !u!114 &3893132101495457040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476231584679106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: ColorPaletteNOTEAM
+  shaderName: Universal Render Pipeline/Lit
 --- !u!114 &4356669514193528123
 MonoBehaviour:
   m_ObjectHideFlags: 0

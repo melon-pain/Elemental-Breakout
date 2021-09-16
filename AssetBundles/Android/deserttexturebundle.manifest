@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 1278018105
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e26c62ccaad9caf3dabf54c7b0d9e891
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Imported Packages/AurynSky/Desert Pack/Textures/ColorPaletteRED.png
+- Assets/Imported Packages/AurynSky/Desert Pack/Textures/ColorPaletteNOTEAM.png
+- Assets/Imported Packages/AurynSky/Desert Pack/Textures/QuickSandMaterial.psd
+- Assets/Imported Packages/AurynSky/Desert Pack/Textures/ColorPaletteBLUE.png
+- Assets/Imported Packages/AurynSky/Desert Pack/Textures/CubeParticleDesert.psd
+Dependencies: []

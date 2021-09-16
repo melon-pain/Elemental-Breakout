@@ -22,8 +22,7 @@ public class AssetBundleManager : ScriptableObject
 
     public void Awake()
     {
-        loadedBundles.Clear();
-        Debug.Log("AWAKE");
+        //loadedBundles.Clear();
     }
 
     public AssetBundle LoadBundle(string bundleName)

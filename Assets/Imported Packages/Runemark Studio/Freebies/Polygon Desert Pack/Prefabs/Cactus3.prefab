@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 2324206}
   - component: {fileID: 5643886125720135283}
   - component: {fileID: 86476570504788996}
+  - component: {fileID: 8478916414166574444}
   m_Layer: 0
   m_Name: cactus3
   m_TagString: Untagged
@@ -93,8 +94,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f5862a071b976404b90477399414fa74, type: 2}
-  - {fileID: 2100000, guid: 0e4890f47005c3a4fbe1f368c4939d86, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -153,6 +154,27 @@ MonoBehaviour:
   assetName: cactus3
   subAssetName: Cactus3
   isMultiple: 1
+--- !u!114 &8478916414166574444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: 
+  shaderName: Universal Render Pipeline/Lit
+  assetNames:
+  - Thorn
+  - Cactus
+  isMultiple: 1
 --- !u!1 &197264
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +187,7 @@ GameObject:
   - component: {fileID: 3330312}
   - component: {fileID: 2393136}
   - component: {fileID: 4817054072583145753}
+  - component: {fileID: 6152567714738848215}
   m_Layer: 0
   m_Name: cactus3flower
   m_TagString: Untagged
@@ -213,8 +236,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a0eb1ba83e4b048409871a19b9850bb6, type: 2}
-  - {fileID: 2100000, guid: 0d2b752cb7a0cfa4883178ad88553bc1, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -252,4 +275,25 @@ MonoBehaviour:
   bundleName: desertbundle
   assetName: cactus3
   subAssetName: Barrel.003
+  isMultiple: 1
+--- !u!114 &6152567714738848215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: 
+  shaderName: Universal Render Pipeline/Lit
+  assetNames:
+  - Flower
+  - FlowerCenter
   isMultiple: 1

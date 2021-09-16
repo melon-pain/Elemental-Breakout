@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 2375444}
   - component: {fileID: 9103810278363881276}
   - component: {fileID: 3650303095393109433}
+  - component: {fileID: 7616890667072707405}
   m_Layer: 0
   m_Name: cactus1
   m_TagString: Untagged
@@ -92,8 +93,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f5862a071b976404b90477399414fa74, type: 2}
-  - {fileID: 2100000, guid: 0e4890f47005c3a4fbe1f368c4939d86, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -129,7 +130,7 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.103378706
+  - screenRelativeHeight: 0.050186504
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 2375444}
@@ -151,3 +152,24 @@ MonoBehaviour:
   assetName: cactus1
   subAssetName: 
   isMultiple: 0
+--- !u!114 &7616890667072707405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: 
+  shaderName: Universal Render Pipeline/Lit
+  assetNames:
+  - Thorn
+  - Cactus
+  isMultiple: 1

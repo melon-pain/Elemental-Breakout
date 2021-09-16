@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33770456204018170}
   - component: {fileID: 23661963722234926}
   - component: {fileID: 6507447725773643718}
+  - component: {fileID: 4806701967709702576}
   m_Layer: 0
   m_Name: DesertWindow
   m_TagString: Untagged
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1ec2e18e91ff6354baa4f9df6999904a, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,6 +100,25 @@ MonoBehaviour:
   assetName: DesertWindow
   subAssetName: 
   isMultiple: 0
+--- !u!114 &4806701967709702576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004549442224060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: ColorPaletteBLUE
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
+  isMultiple: 0
 --- !u!1 &1027205273449516
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,6 +131,7 @@ GameObject:
   - component: {fileID: 33755235679801462}
   - component: {fileID: 23476194022872252}
   - component: {fileID: 1635797354287301964}
+  - component: {fileID: 1110758936079995465}
   m_Layer: 0
   m_Name: DesertDoorRight_Red
   m_TagString: Untagged
@@ -159,7 +180,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a68b38832a101144bb4fd9a1aa0f1425, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -198,6 +219,25 @@ MonoBehaviour:
   assetName: DesertDoorRight
   subAssetName: 
   isMultiple: 0
+--- !u!114 &1110758936079995465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027205273449516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: ColorPaletteRED
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
+  isMultiple: 0
 --- !u!1 &1471701822128868
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,6 +250,7 @@ GameObject:
   - component: {fileID: 33862522974058418}
   - component: {fileID: 23779434959464336}
   - component: {fileID: 7760373180678501294}
+  - component: {fileID: 5121090053414207662}
   - component: {fileID: 8650631719640989070}
   m_Layer: 0
   m_Name: DesertCastle_Red
@@ -264,7 +305,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1ec2e18e91ff6354baa4f9df6999904a, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -310,6 +351,25 @@ LODGroup:
     - renderer: {fileID: 23476194022872252}
     - renderer: {fileID: 23175139261818192}
   m_Enabled: 1
+--- !u!114 &5121090053414207662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471701822128868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: ColorPaletteBLUE
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
+  isMultiple: 0
 --- !u!114 &8650631719640989070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,6 +399,7 @@ GameObject:
   - component: {fileID: 33941177985600140}
   - component: {fileID: 23761398195422388}
   - component: {fileID: 1234510825960349866}
+  - component: {fileID: 3601391341474760442}
   m_Layer: 0
   m_Name: DesertWindow
   m_TagString: Untagged
@@ -387,7 +448,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1ec2e18e91ff6354baa4f9df6999904a, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -426,6 +487,25 @@ MonoBehaviour:
   assetName: DesertWindow
   subAssetName: 
   isMultiple: 0
+--- !u!114 &3601391341474760442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493802142030926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: ColorPaletteBLUE
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
+  isMultiple: 0
 --- !u!1 &1730672883638634
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +518,7 @@ GameObject:
   - component: {fileID: 33481885634304934}
   - component: {fileID: 23316553489811072}
   - component: {fileID: 2409833676628727306}
+  - component: {fileID: 5399628469569509084}
   m_Layer: 0
   m_Name: DesertWindow
   m_TagString: Untagged
@@ -486,7 +567,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1ec2e18e91ff6354baa4f9df6999904a, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -525,6 +606,25 @@ MonoBehaviour:
   assetName: DesertWindow
   subAssetName: 
   isMultiple: 0
+--- !u!114 &5399628469569509084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730672883638634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: ColorPaletteBLUE
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
+  isMultiple: 0
 --- !u!1 &1831761457673994
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +637,7 @@ GameObject:
   - component: {fileID: 33776407983051186}
   - component: {fileID: 23175139261818192}
   - component: {fileID: 2586238002103785014}
+  - component: {fileID: 5885902403328759100}
   m_Layer: 0
   m_Name: DesertDoorLeft_Red
   m_TagString: Untagged
@@ -585,7 +686,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a68b38832a101144bb4fd9a1aa0f1425, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -623,4 +724,23 @@ MonoBehaviour:
   bundleName: desertbundle
   assetName: DesertDoorLeft
   subAssetName: 
+  isMultiple: 0
+--- !u!114 &5885902403328759100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831761457673994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: deserttexturebundle
+  materialBundleName: desertmaterialbundle
+  assetName: ColorPaletteRED
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
   isMultiple: 0
