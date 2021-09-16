@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Level")]
 public class Level : ScriptableObject
 {
+    [SerializeField] private int currentLevel = 1;
     [Header("Score")]
     [SerializeField] private int m_Score = 0;
     public int score { get => m_Score; }
@@ -18,5 +19,10 @@ public class Level : ScriptableObject
     public void ResetScore()
     {
         m_Score = 0;
+    }
+
+    public void SetCurrentLevel(int level)
+    {
+        currentLevel = level;
     }
 }

@@ -103,8 +103,6 @@ public class GestureManager : MonoBehaviour
                 }
                 else if (gestureTime <= swipeProperty.GetSwipeTime() && Vector2.Distance(startPoint, endPoint) >= (Screen.dpi * swipeProperty.GetMinSwipeDistance()))
                 {
-                    Debug.Log($"Start: {startPoint}");
-                    Debug.Log($"End: {endPoint}");
                     Swipe();
                 }
                 break;
@@ -222,7 +220,7 @@ public class GestureManager : MonoBehaviour
 
             Debug.Log("Swipe");
         }
-        hasGesture = true;
+        //hasGesture = true;
     }
 
     private void Drag()

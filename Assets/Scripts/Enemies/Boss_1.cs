@@ -38,7 +38,7 @@ public class Boss_1 : MonoBehaviour
 
     private void Update()
     {
-        if (!m_IsDead && !isShooting)
+        if (!m_IsDead && isShooting)
         {
             transform.rotation = Quaternion.RotateTowards(this.transform.rotation, Quaternion.LookRotation(player.transform.position - transform.position), 1.0f);
         }
@@ -48,14 +48,15 @@ public class Boss_1 : MonoBehaviour
     {
         while (!m_IsDead)
         {
+            float chargeTime = Random.Range(2.0f, 5.0f);
             isShooting = false;
             m_Projectiles.Stop();
             m_Animator.SetBool("IsShooting", false);
-            yield return new WaitForSeconds(Random.Range(4.0f, 8.0f));
+            yield return new WaitForSeconds(chargeTime);
             isShooting = true;
             m_Projectiles.Play();
             m_Animator.SetBool("IsShooting", true);
-            yield return new WaitForSeconds(Random.Range(2.0f, 4.0f));
+            yield return new WaitForSeconds(chargeTime);
         }
     }
 

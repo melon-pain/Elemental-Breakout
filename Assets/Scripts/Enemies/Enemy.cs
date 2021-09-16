@@ -51,6 +51,9 @@ public class Enemy : MonoBehaviour, IDamage
 
     private void Awake()
     {
+        m_Body.enabled = false;
+        m_Core.enabled = false;
+
         if (m_RandomElement)
             m_Element = (Element)UnityEngine.Random.Range(0, 4);
 
@@ -78,6 +81,8 @@ public class Enemy : MonoBehaviour, IDamage
 
         if (m_ChangeElementOnTime)
             StartCoroutine(ChangeElementOnTime());
+
+        Invoke("Visible", 0.1f);
     }
 
     private void Update()
@@ -153,5 +158,11 @@ public class Enemy : MonoBehaviour, IDamage
             yield return new WaitForSeconds(5.0f);
         }
         yield break;
+    }
+
+    private void Visible()
+    {
+        m_Body.enabled = true;
+        m_Core.enabled = true;
     }
 }

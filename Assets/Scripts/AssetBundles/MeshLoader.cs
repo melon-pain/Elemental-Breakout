@@ -44,6 +44,7 @@ public class MeshLoader : MonoBehaviour
 
         this.GetComponent<MeshFilter>().mesh = Array.Find(assets, item => item.name == subAssetName) as Mesh;
 
+        Destroy(this);
         yield break;
     }
 
@@ -60,6 +61,7 @@ public class MeshLoader : MonoBehaviour
 
         this.GetComponent<MeshFilter>().mesh = req.asset as Mesh;
 
+        Destroy(this);
         yield break;
     }
 }
