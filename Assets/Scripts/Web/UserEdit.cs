@@ -13,17 +13,17 @@ public class UserEdit : MonoBehaviour
     [SerializeField] private TMP_Dropdown dropDown;
     [SerializeField] private Button confirmButton;
     private bool confirmActive;
-    private bool dropDownSelected = false;
+    private bool dropDownSelected;
 
     private void Start()
     {
         confirmButton.interactable = false;
+        dropDownSelected = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Dropdown value: " + dropDown.value);
         confirmActive = true;
         for (int i = 0; i < requiredInputs.Length; i++)
         {
@@ -57,7 +57,6 @@ public class UserEdit : MonoBehaviour
         PlayerParams.Add("contact", requiredInputs[3].text);
 
         userProfileScript.EditPlayer(PlayerParams, userProfileScript.users[dropDown.value].id);
-        userProfileScript.GetAllPlayers();
     }
 
     public void UpdateDropDown()

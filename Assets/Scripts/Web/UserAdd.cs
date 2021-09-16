@@ -44,5 +44,4 @@ public class UserAdd : MonoBehaviour
 
         userProfileScript.CreatePlayer(PlayerParams);
     }
-
 }

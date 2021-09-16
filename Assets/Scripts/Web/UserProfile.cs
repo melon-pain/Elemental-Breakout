@@ -83,6 +83,7 @@ public class UserProfile : MonoBehaviour
         if (string.IsNullOrEmpty(request.error))
         {
             Debug.Log($"Deleted Player: {request.downloadHandler.text}");
+            GetAllPlayers();
         }
         else
         {
@@ -113,6 +114,7 @@ public class UserProfile : MonoBehaviour
         if (string.IsNullOrEmpty(request.error))
         {
             Debug.Log($"Created Player: {request.downloadHandler.text}");
+            GetAllPlayers();
         }
         else
         {
@@ -159,6 +161,7 @@ public class UserProfile : MonoBehaviour
                 //Debug.Log($"Player Nickname: {player["nickname"]}");
             }
             OnUserProfileGetAll.Invoke();
+            Debug.Log($"Get all invoke");
         }
         else
         {
