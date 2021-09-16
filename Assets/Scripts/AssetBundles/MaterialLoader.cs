@@ -52,6 +52,8 @@ public class MaterialLoader : MonoBehaviour
         }
 
         this.GetComponent<MeshRenderer>().materials = mats;
+
+        Destroy(this);
         yield break;
     }
 
@@ -73,6 +75,7 @@ public class MaterialLoader : MonoBehaviour
         mat.shader = Shader.Find(shaderName);
         this.GetComponent<MeshRenderer>().material = mat;
 
+        Destroy(this);
         yield break;
     }
 }

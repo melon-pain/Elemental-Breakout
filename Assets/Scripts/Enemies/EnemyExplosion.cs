@@ -23,7 +23,7 @@ public class EnemyExplosion : MonoBehaviour
 
     private IEnumerator Explode()
     {
-        yield return new WaitForSeconds(Random.Range(1.0f, 2.0f));
+        yield return new WaitForSeconds(Random.Range(2.0f, 3.0f));
         m_Animator.SetTrigger("Explode");
         yield return new WaitForSeconds(1.0f);
         m_Projectiles.Play();

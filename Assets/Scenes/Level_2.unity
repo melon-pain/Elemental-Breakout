@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: e33d2b078214b7e49b7bdcd0dd335d94
-  m_OcclusionCullingData: {fileID: 36300000, guid: 6067b822e69ed3c4a8302abc739d5b59, type: 2}
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -55633,11 +55633,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4614328281102273276, guid: ae94d20cf8f797f41ae7193cb2042d4a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 107.19
       objectReference: {fileID: 0}
     - target: {fileID: 4614328281102273276, guid: ae94d20cf8f797f41ae7193cb2042d4a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 40.22
       objectReference: {fileID: 0}
     - target: {fileID: 4614328281697494336, guid: ae94d20cf8f797f41ae7193cb2042d4a, type: 3}
       propertyPath: m_Follow
@@ -55693,7 +55693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5532684022453616712, guid: ae94d20cf8f797f41ae7193cb2042d4a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae94d20cf8f797f41ae7193cb2042d4a, type: 3}

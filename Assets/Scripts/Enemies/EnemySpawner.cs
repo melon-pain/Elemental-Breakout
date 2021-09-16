@@ -53,7 +53,8 @@ public class EnemySpawner: MonoBehaviour
         for (int i = 0; i < m_Waves.Count; i++)
         {
             m_Waves[i].Instantiate(this.transform);
-            m_Waves[i].OnWaveFinished.AddListener(delegate { NextWave(); });
+            if (i < m_Waves.Count - 1)
+                m_Waves[i].OnWaveFinished.AddListener(delegate { NextWave(); });
         }
         m_Waves[m_CurrentWave].SpawnWave();
     }

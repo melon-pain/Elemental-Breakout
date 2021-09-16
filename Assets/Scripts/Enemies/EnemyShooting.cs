@@ -22,10 +22,11 @@ public class EnemyShooting : MonoBehaviour
     {
         while (!enemy.isDead)
         {
+            float chargeTime = Random.Range(2.0f, 4.0f);
             m_Projectiles.Stop();
             if (m_Animator)
                 m_Animator.SetBool("IsShooting", false);
-            yield return new WaitForSeconds(Random.Range(2.0f, 4.0f));
+            yield return new WaitForSeconds(chargeTime);
 
             if (enemy.isDead)
                 break;
@@ -34,7 +35,7 @@ public class EnemyShooting : MonoBehaviour
             m_Projectiles.Play();
             if (m_Animator)
                 m_Animator.SetBool("IsShooting", true);
-            yield return new WaitForSeconds(Random.Range(1.0f, 2.0f));
+            yield return new WaitForSeconds(chargeTime);
         }
         yield break;
     }

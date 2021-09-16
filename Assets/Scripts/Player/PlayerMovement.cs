@@ -52,6 +52,7 @@ public class PlayerMovement : MonoBehaviour, ISwipeHandler
             time += 0.025f;
             yield return new WaitForSeconds(0.01f);
         }
+        Debug.Log(m_DodgeDirection);
         m_IsDodging = false;
 
         yield break;
