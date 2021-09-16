@@ -152,7 +152,6 @@ public class GestureManager : MonoBehaviour
             if (Mathf.Abs(distance) >= (spreadProperty.MinDistanceChange * Screen.dpi))
             {
                 Spread(distance);
-                Debug.Log("Spread");
             }
 
             else if (currDistance >= rotateProperty.minDistance * Screen.dpi)
@@ -174,7 +173,6 @@ public class GestureManager : MonoBehaviour
             if (Physics.Raycast(r, out hit, Mathf.Infinity, cullingMask))
             {
                 hitObj = hit.collider.gameObject;
-                Debug.Log(hitObj.name);
             }
 
             TapEventData tapEventData = new TapEventData(finger_1.position, hitObj);
@@ -195,7 +193,6 @@ public class GestureManager : MonoBehaviour
             if (Physics.Raycast(r, out hit, Mathf.Infinity, cullingMask))
             {
                 hitObj = hit.collider.gameObject;
-                Debug.Log(hitObj.name);
             }
 
             SwipeDirection swipeDir = SwipeDirection.Right;
@@ -218,9 +215,8 @@ public class GestureManager : MonoBehaviour
             SwipeEventData swipeEventData = new SwipeEventData(startPoint, swipeDir, dir, hitObj);
             OnSwipe.Invoke(swipeEventData);
 
-            Debug.Log("Swipe");
         }
-        //hasGesture = true;
+        hasGesture = true;
     }
 
     private void Drag()
@@ -234,7 +230,6 @@ public class GestureManager : MonoBehaviour
             if (Physics.Raycast(r, out hit, Mathf.Infinity, cullingMask))
             {
                 hitObj = hit.collider.gameObject;
-                Debug.Log("Drag hit");
             }
 
             DragEventData dragEventData = new DragEventData(finger_1, hitObj);

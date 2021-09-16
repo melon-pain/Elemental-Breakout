@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cheats : MonoBehaviour
+[System.Serializable]
+[CreateAssetMenu(fileName = "Cheats")]
+public class Cheats : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private bool m_InfiniteHP = false;
+    public bool infiniteHP { get => m_InfiniteHP; }
+    [SerializeField] private bool m_InfiniteMP = false;
+    public bool infiniteMP { get => m_InfiniteMP; }
+
+    public void InfiniteHP (bool value)
     {
-        
+        m_InfiniteHP = value;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void InfiniteMP(bool value)
     {
-        
+        m_InfiniteHP = value;
     }
 }

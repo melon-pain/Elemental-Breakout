@@ -11,6 +11,10 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
     [SerializeField] private Upgrades upgrades;
     #endregion Upgrades
 
+    #region Cheats
+    [SerializeField] private Cheats cheats;
+    #endregion Cheats
+
     public enum WeaponType
     {
         Projectile,
@@ -43,6 +47,7 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
     [Tooltip("The amount of Mana Points the player currently has")]
     [SerializeField] private float m_CurrentMP;
     public UnityEvent<float> OnMPChanged = new UnityEvent<float>();
+    private bool m_InfiniteMP = false;
     #endregion MP
 
     [Header("Aim")]
@@ -87,6 +92,8 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
 
         var emission = m_Projectiles.emission;
         emission.rateOverTime = m_ProjectileFireRate;
+
+        m_InfiniteMP = cheats.infiniteMP;
     }
 
     public void StartShooting()
@@ -149,6 +156,8 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
 
     public void ConsumeMana(float amount)
     {
+        if (m_InfiniteMP)
+            return;
         m_CurrentMP = Mathf.Max(0.0f, m_CurrentMP - amount);
         OnMPChanged.Invoke(m_CurrentMP / m_MaxMP);
     }

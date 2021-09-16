@@ -11,6 +11,10 @@ public class Player : MonoBehaviour, IDamage
     [SerializeField] private Upgrades upgrades;
     #endregion Upgrades
 
+    #region Cheats
+    [SerializeField] private Cheats cheats;
+    #endregion Cheats
+
     #region Player Stats
     [Header("HP")]
     #region HP
@@ -22,6 +26,7 @@ public class Player : MonoBehaviour, IDamage
     [SerializeField] private TMP_Text m_HPText;
     private bool m_IsInvulnerable = false;
     private Coroutine InvulnerableCoroutine = null;
+    private bool m_InfiniteHP = false;
     #endregion HP
 
     #region SP
@@ -57,11 +62,13 @@ public class Player : MonoBehaviour, IDamage
         spBar.SetSegments((int)m_CurrentSP);
 
         m_HPText.text = $"{m_CurrentHP} / {m_MaxHP}";
+
+        m_InfiniteHP = cheats.infiniteHP;
     }
 
     public void TakeDamage(Element attacking, float amount)
     {
-        if (m_IsInvulnerable || GetComponent<PlayerMovement>().isDodging)
+        if (m_IsInvulnerable || GetComponent<PlayerMovement>().isDodging || m_InfiniteHP)
             return;
         if (m_CurrentSP > 0.0f)
         {
