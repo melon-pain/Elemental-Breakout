@@ -4942,6 +4942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades: {fileID: 11400000, guid: a4a44b4eda6e09f4a906d56265069321, type: 2}
+  cheats: {fileID: 11400000, guid: fb6c4ce4f83276d4cbe92b86652a1bc6, type: 2}
   m_Element: 0
   m_WeaponType: 0
   m_Projectiles: {fileID: 6826963024908893844}
@@ -19748,6 +19749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrades: {fileID: 11400000, guid: a4a44b4eda6e09f4a906d56265069321, type: 2}
+  cheats: {fileID: 11400000, guid: fb6c4ce4f83276d4cbe92b86652a1bc6, type: 2}
   m_MaxHP: 100
   m_CurrentHP: 100
   m_HPBar: {fileID: 0}
