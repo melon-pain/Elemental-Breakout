@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 195043663
+CRC: 4258689928
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -16,3 +16,23 @@ AssetBundleManifest:
     Info_3:
       Name: deserttexturebundle
       Dependencies: {}
+    Info_4:
+      Name: forestbundle
+      Dependencies: {}
+    Info_5:
+      Name: forestmaterialbundle
+      Dependencies:
+        Dependency_0: foresttexturebundle
+    Info_6:
+      Name: foresttexturebundle
+      Dependencies: {}
+    Info_7:
+      Name: winterbundle
+      Dependencies: {}
+    Info_8:
+      Name: wintertexturebundle
+      Dependencies: {}
+    Info_9:
+      Name: wintermaterialbundle
+      Dependencies:
+        Dependency_0: wintertexturebundle

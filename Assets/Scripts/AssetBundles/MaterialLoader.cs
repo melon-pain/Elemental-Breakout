@@ -68,6 +68,7 @@ public class MaterialLoader : MonoBehaviour
             yield return null;
         }
 
+
         Material mat = materialReq.asset as Material;
         mat.shader = Shader.Find(shaderName);
         this.GetComponent<MeshRenderer>().material = mat;

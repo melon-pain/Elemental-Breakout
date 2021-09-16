@@ -622,7 +622,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 25
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5720,9 +5720,11 @@ MonoBehaviour:
   m_Element: 1
   m_RandomElement: 1
   m_ChangeElementOnHP: 0
+  m_ChangeElementOnTime: 0
   m_MaxHP: 50
   m_CurrentHP: 100
   m_HPBar: {fileID: 1620944980183586169}
+  m_TurnSpeed: 15
   levelManager: {fileID: 0}
   m_Score: 200
   m_Body: {fileID: 7939299654624243415}

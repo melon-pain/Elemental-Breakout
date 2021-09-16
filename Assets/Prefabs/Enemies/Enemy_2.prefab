@@ -168,9 +168,11 @@ MonoBehaviour:
   m_Element: 0
   m_RandomElement: 1
   m_ChangeElementOnHP: 0
+  m_ChangeElementOnTime: 0
   m_MaxHP: 50
   m_CurrentHP: 50
   m_HPBar: {fileID: 3434872481326729691}
+  m_TurnSpeed: 15
   levelManager: {fileID: 0}
   m_Score: 100
   m_Body: {fileID: 4249121649771261597}
@@ -1157,7 +1159,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 10
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5050,7 +5052,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3ddabca4f3143ab47809e6c64fe80b70, type: 2}
+  - {fileID: 2100000, guid: 3a3bc77c44537c548a8e0f3e68a292a4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

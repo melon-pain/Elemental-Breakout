@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3538984226826132945}
   - component: {fileID: 3538984226824838641}
   - component: {fileID: 3538984226823839537}
+  - component: {fileID: 8392916411439428345}
+  - component: {fileID: 7510541745324252480}
   m_Layer: 0
   m_Name: Tower_Window_W (6)
   m_TagString: Untagged
@@ -39,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3538984226825765361}
-  m_Mesh: {fileID: 4300000, guid: d6c683f8e24767f4b82c6bc522ffc048, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!23 &3538984226823839537
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -48,16 +50,18 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3538984226825765361}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a289c7f765c09e74186a09dce58104d5, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -65,6 +69,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -77,6 +82,43 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8392916411439428345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3538984226825765361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: wintertexturebundle
+  materialBundleName: wintermaterialbundle
+  assetName: ColorPaletteNormal
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
+  isMultiple: 0
+--- !u!114 &7510541745324252480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3538984226825765361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f2a70591cd37f4986e1eef184c1e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  bundleName: winterbundle
+  assetName: ForestCastleWindow
+  subAssetName: 
+  isMultiple: 0
 --- !u!1 &4613426212041100704
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,6 +130,8 @@ GameObject:
   - component: {fileID: 4613426212040610176}
   - component: {fileID: 4613426212039840160}
   - component: {fileID: 4613426212038841184}
+  - component: {fileID: 8432215064895946702}
+  - component: {fileID: 2543074732609718389}
   m_Layer: 0
   m_Name: Tower_Window_W (3)
   m_TagString: Untagged
@@ -116,7 +160,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4613426212041100704}
-  m_Mesh: {fileID: 4300000, guid: d6c683f8e24767f4b82c6bc522ffc048, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!23 &4613426212038841184
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -125,16 +169,18 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4613426212041100704}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a289c7f765c09e74186a09dce58104d5, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -142,6 +188,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -154,6 +201,43 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8432215064895946702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4613426212041100704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: wintertexturebundle
+  materialBundleName: wintermaterialbundle
+  assetName: ColorPaletteNormal
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
+  isMultiple: 0
+--- !u!114 &2543074732609718389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4613426212041100704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f2a70591cd37f4986e1eef184c1e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  bundleName: winterbundle
+  assetName: ForestCastleWindow
+  subAssetName: 
+  isMultiple: 0
 --- !u!1 &6292183655389419844
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +249,8 @@ GameObject:
   - component: {fileID: 6292183655389775204}
   - component: {fileID: 6292183655392642372}
   - component: {fileID: 6292183655391676292}
+  - component: {fileID: 1314871689894686419}
+  - component: {fileID: 2884092214758905091}
   m_Layer: 0
   m_Name: Tower_Window_W (5)
   m_TagString: Untagged
@@ -193,7 +279,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6292183655389419844}
-  m_Mesh: {fileID: 4300000, guid: d6c683f8e24767f4b82c6bc522ffc048, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!23 &6292183655391676292
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -202,16 +288,18 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6292183655389419844}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a289c7f765c09e74186a09dce58104d5, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -219,6 +307,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -231,6 +320,43 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1314871689894686419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6292183655389419844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: wintertexturebundle
+  materialBundleName: wintermaterialbundle
+  assetName: ColorPaletteNormal
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
+  isMultiple: 0
+--- !u!114 &2884092214758905091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6292183655389419844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f2a70591cd37f4986e1eef184c1e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  bundleName: winterbundle
+  assetName: ForestCastleWindow
+  subAssetName: 
+  isMultiple: 0
 --- !u!1 &7111167667687284804
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +368,8 @@ GameObject:
   - component: {fileID: 7111167667687284803}
   - component: {fileID: 7111167667687284802}
   - component: {fileID: 7111167667687284805}
+  - component: {fileID: 6417450909809663170}
+  - component: {fileID: 7617127288358978569}
   m_Layer: 0
   m_Name: Tower_W_Blue
   m_TagString: Untagged
@@ -264,9 +392,6 @@ Transform:
   - {fileID: 8692712455081189841}
   - {fileID: 6292183655389775204}
   - {fileID: 3538984226826132945}
-  - {fileID: 5873291032475810953}
-  - {fileID: 5873291032492638176}
-  - {fileID: 5873291030700845784}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -277,7 +402,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7111167667687284804}
-  m_Mesh: {fileID: 4300000, guid: c73dae5f4a5c46a44b41456bf30328c4, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!23 &7111167667687284805
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -286,16 +411,18 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7111167667687284804}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a289c7f765c09e74186a09dce58104d5, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -303,6 +430,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -315,6 +443,43 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6417450909809663170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7111167667687284804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: wintertexturebundle
+  materialBundleName: wintermaterialbundle
+  assetName: ColorPaletteNormal
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
+  isMultiple: 0
+--- !u!114 &7617127288358978569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7111167667687284804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f2a70591cd37f4986e1eef184c1e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  bundleName: winterbundle
+  assetName: ForestTower
+  subAssetName: 
+  isMultiple: 0
 --- !u!1 &8692712455081426417
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +491,8 @@ GameObject:
   - component: {fileID: 8692712455081189841}
   - component: {fileID: 8692712455078289905}
   - component: {fileID: 8692712455079420721}
+  - component: {fileID: 5164032974509963685}
+  - component: {fileID: 1785978397604621567}
   m_Layer: 0
   m_Name: Tower_Window_W (4)
   m_TagString: Untagged
@@ -354,7 +521,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8692712455081426417}
-  m_Mesh: {fileID: 4300000, guid: d6c683f8e24767f4b82c6bc522ffc048, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!23 &8692712455079420721
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -363,16 +530,18 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8692712455081426417}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a289c7f765c09e74186a09dce58104d5, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -380,6 +549,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -392,258 +562,40 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1001 &7111167667064190705
-PrefabInstance:
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5164032974509963685
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 7111167667687284803}
-    m_Modifications:
-    - target: {fileID: 5452554494112539534, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_Name
-      value: WinterBanner_v2_Blue (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.269001
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.2084
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.111
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c8cc091515f735d4abce472ef3c8ceb5, type: 3}
---- !u!4 &5873291032475810953 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7111167667064190705}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &7111167667080951192
-PrefabInstance:
+  m_GameObject: {fileID: 8692712455081426417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6318804fc66f9114bb261d7d74638392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  textureBundleName: wintertexturebundle
+  materialBundleName: wintermaterialbundle
+  assetName: ColorPaletteNormal
+  shaderName: Universal Render Pipeline/Lit
+  assetNames: []
+  isMultiple: 0
+--- !u!114 &1785978397604621567
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 7111167667687284803}
-    m_Modifications:
-    - target: {fileID: 5452554494112539534, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_Name
-      value: WinterBanner_v2_Blue (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.296999
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.2084
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.111
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c8cc091515f735d4abce472ef3c8ceb5, type: 3}
---- !u!4 &5873291032492638176 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7111167667080951192}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &7111167668778360992
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 7111167667687284803}
-    m_Modifications:
-    - target: {fileID: 5452554494112539534, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_Name
-      value: WinterBanner_v2_Blue (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.027000427
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.2084
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.111
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c8cc091515f735d4abce472ef3c8ceb5, type: 3}
---- !u!4 &5873291030700845784 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3687865639146326648, guid: c8cc091515f735d4abce472ef3c8ceb5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7111167668778360992}
-  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692712455081426417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f2a70591cd37f4986e1eef184c1e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  bundleName: winterbundle
+  assetName: ForestCastleWindow
+  subAssetName: 
+  isMultiple: 0

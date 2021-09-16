@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 3404951168
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9ac4bfcf8f565fc00f1e66b8f31e115c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Imported Packages/AurynSky/WinterArena/Textures/ColorPaletteNormal.png
+- Assets/Imported Packages/AurynSky/WinterArena/Textures/CubeParticleWinter.psd
+- Assets/Imported Packages/AurynSky/WinterArena/Textures/ColorPaletteRED.png
+- Assets/Imported Packages/AurynSky/WinterArena/Textures/ColorPaletteBLUE.png
+Dependencies: []

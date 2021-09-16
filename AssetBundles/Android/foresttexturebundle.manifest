@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1057139814
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 89d484d9e8feb57664d364a2dfe21d0a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Imported Packages/AurynSky/Forest Pack/Textures/CubeParticle.psd
+- Assets/Imported Packages/AurynSky/Forest Pack/Textures/Water.psd
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Texture/Low Poly Forest
+  Pack Texture.png
+- Assets/Imported Packages/AurynSky/Forest Pack/Textures/ColorPaletteNormal.png
+- Assets/Imported Packages/AurynSky/Forest Pack/Textures/ColorPaletteRed.png
+- Assets/Imported Packages/AurynSky/Forest Pack/Textures/ColorPaletteBLUE.png
+Dependencies: []

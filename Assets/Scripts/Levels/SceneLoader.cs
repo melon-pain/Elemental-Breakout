@@ -65,6 +65,11 @@ public class SceneLoader : MonoBehaviour
         }
         yield return new WaitForSeconds(1.0f);
         operation.allowSceneActivation = true;
+
+        this.progress = operation.progress;
+
+        if (OnLoadSceneProgress.GetPersistentEventCount() > 0)
+            OnLoadSceneProgress.Invoke(this.progress);
     }
 
     private IEnumerator LoadSceneAsync(string sceneName, LoadSceneMode mode)
@@ -83,5 +88,10 @@ public class SceneLoader : MonoBehaviour
         }
         yield return new WaitForSeconds(1.0f);
         operation.allowSceneActivation = true;
+        
+        this.progress = operation.progress;
+
+        if (OnLoadSceneProgress.GetPersistentEventCount() > 0)
+            OnLoadSceneProgress.Invoke(this.progress);
     }
 }

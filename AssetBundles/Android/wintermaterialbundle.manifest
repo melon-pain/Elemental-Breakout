@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 2605172225
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 301ad256b02d87bb7f2fe65f11e9021a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 939e20ecac0e95a3f7c5cfb3e57acb1d
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Imported Packages/AurynSky/WinterArena/Materials/ColorPaletteBLUE.mat
+- Assets/Imported Packages/AurynSky/WinterArena/Materials/CubeParticlesWinter.mat
+- Assets/Imported Packages/Snowy_Low_Poly_Trees/Materials/Wood.mat
+- Assets/Imported Packages/AurynSky/WinterArena/Materials/ColorPaletteRED.mat
+- Assets/Imported Packages/AurynSky/WinterArena/Materials/ColorPaletteNormal.mat
+- Assets/Imported Packages/Snowy_Low_Poly_Trees/Materials/Snow.mat
+- Assets/Imported Packages/Snowy_Low_Poly_Trees/Materials/Leafs.mat
+- Assets/Imported Packages/AurynSky/WinterArena/Materials/ShowCaseMaterial.mat
+Dependencies:
+- C:/Users/melon/source/Repos/Elemental-Breakout/AssetBundles/Android/wintertexturebundle

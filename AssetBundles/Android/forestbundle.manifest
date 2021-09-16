@@ -1,0 +1,128 @@
+ManifestFileVersion: 0
+CRC: 2767057996
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: afca8c50882bb3efed277395288ff88d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 317920cb0e26af913dfcf6c0b10ef1c2
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/grass_green_2.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_blue_6.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_bare_7.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/plant_orange_1.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/young_tree_1.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rotten_log_2.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rock_12.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_green_5.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_blue_2.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_bare_8.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_green_3.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_blue_8.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rock_13.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_stump_4.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_bare_2.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_bare_3.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_bare_9.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_stump_6.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/plant_orange_3.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/plant_green_1.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rock_4.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/grass_blue_1.fbx
+- Assets/Imported Packages/AurynSky/Forest Pack/Models/ForestBarrel.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_orange_5.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_bare_6.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rock_2.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rock_3.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_green_9.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/grass_orange_1.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/grass_blue_2.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rock_10.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_orange_8.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/plant_orange_2.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_green_4.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_stump_1.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_stump_5.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_blue_10.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_orange_7.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rock_11.fbx
+- Assets/Imported Packages/AurynSky/Forest Pack/Models/ForestBanner.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_bare_4.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/plant_green_2.fbx
+- Assets/Imported Packages/AurynSky/Forest Pack/Models/ForestCastleWindow.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/plant_blue_2.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_green_8.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_bare_1.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_green_2.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_orange_9.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rock_14.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_green_10.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_blue_9.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rock_8.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_blue_1.fbx
+- Assets/Imported Packages/AurynSky/Forest Pack/Models/ForestLadderExtra.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rock_9.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_green_1.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_stump_2.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/plant_blue_3.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_green_7.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/plant_blue_1.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_blue_5.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_orange_2.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_bare_5.fbx
+- Assets/Imported Packages/AurynSky/Forest Pack/Models/ForestCastleDoorL.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rock_6.fbx
+- Assets/Imported Packages/AurynSky/Forest Pack/Models/ForestCastleDoorR.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_orange_3.fbx
+- Assets/Imported Packages/AurynSky/Forest Pack/Models/ForestFlag.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rock_1.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_orange_10.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rock_7.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_blue_7.fbx
+- Assets/Imported Packages/AurynSky/Forest Pack/Models/ForestCrate.fbx
+- Assets/Imported Packages/AurynSky/Forest Pack/Models/ForestBrazzier.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rock_5.fbx
+- Assets/Imported Packages/AurynSky/Forest Pack/Models/ForestTower.fbx
+- Assets/Imported Packages/AurynSky/Forest Pack/Models/ForestCastle.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_blue_3.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/young_tree_3.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/grass_orange_2.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_orange_4.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rotten_log_3.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_blue_4.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_orange_6.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_green_6.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/young_tree_2.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/grass_green_1.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/plant_green_3.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_orange_1.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/tree_stump_3.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rotten_log_1.fbx
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Meshes/rock_15.fbx
+Dependencies: []

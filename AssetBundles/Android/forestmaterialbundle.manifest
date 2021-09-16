@@ -1,0 +1,35 @@
+ManifestFileVersion: 0
+CRC: 997652747
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6fcb96926359b39dbc8a02e7e4620963
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 939e20ecac0e95a3f7c5cfb3e57acb1d
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Material/Demo Materials/Demo
+  Brown.mat
+- Assets/Imported Packages/AurynSky/Forest Pack/Materials/ColorPaletteNormal.mat
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Material/Demo Materials/Demo
+  Green.mat
+- Assets/Imported Packages/AurynSky/Forest Pack/Materials/CubeParticles.mat
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Material/Demo Materials/Demo
+  Orange.mat
+- Assets/Imported Packages/AurynSky/Forest Pack/Materials/ColorPaletteBLUE.mat
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Material/Demo Materials/Demo
+  Blue.mat
+- Assets/Imported Packages/AurynSky/Forest Pack/Materials/ShowCase.mat
+- Assets/Imported Packages/Low Poly Forest Pack/Components/Material/Low Poly Forest
+  Pack Material.mat
+Dependencies:
+- C:/Users/melon/source/Repos/Elemental-Breakout/AssetBundles/Android/foresttexturebundle
