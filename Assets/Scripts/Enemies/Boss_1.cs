@@ -33,6 +33,8 @@ public class Boss_1 : MonoBehaviour
 
         AssetBundle bundle = assetBundleManager.LoadBundle("uibundle");
         m_HPBarIcon.sprite = bundle.LoadAsset<Sprite>("T_Bar");
+        m_HPBarRed.sprite = bundle.LoadAsset<Sprite>("T_Bar");
+        m_HPBarOrange.sprite = bundle.LoadAsset<Sprite>("T_Bar");
         assetBundleManager.UnloadBundle("uibundle");
 
         OnDeath.AddListener(player.GetComponentInChildren<PlayerShooting>().RemoveLockOn);
@@ -66,7 +68,7 @@ public class Boss_1 : MonoBehaviour
     {
         m_CurrentHP -= amount;
         m_HPBar.UpdateBar(m_CurrentHP / m_MaxHP);
-
+        Debug.Log(m_CurrentHP / m_MaxHP);
         if (m_CurrentHP <= 0.0f)
         {
             m_IsDead = true;
