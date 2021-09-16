@@ -43,16 +43,18 @@ public class PlayerMovement : MonoBehaviour, ISwipeHandler
         float time = 0.0f;
 
         Vector3 oldPosition = this.transform.localPosition;
+        Vector3 targetPosition = oldPosition + (m_DodgeDirection * m_DodgeSpeed);
         Quaternion oldRotation = model.transform.localRotation;
         m_IsDodging = true;
+
         while (time < 1.0f)
         {
-            this.transform.localPosition = Vector3.Lerp(oldPosition, oldPosition + (m_DodgeDirection * m_DodgeSpeed), time);
+            this.transform.localPosition = Vector3.ClampMagnitude(Vector3.Lerp(oldPosition, targetPosition, time), m_MovementRange);
             model.transform.localEulerAngles += new Vector3(0.0f, 0.0f, 360.0f) * 0.025f;
             time += 0.025f;
             yield return new WaitForSeconds(0.01f);
         }
-        Debug.Log(m_DodgeDirection);
+
         m_IsDodging = false;
 
         yield break;
