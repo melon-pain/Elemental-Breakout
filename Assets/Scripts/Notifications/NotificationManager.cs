@@ -1,14 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System;
 
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using Unity.Notifications.Android;
+
+using TMPro;
 
 public class NotificationManager : MonoBehaviour
 {
     public UnityEvent OnDataNotifPressed;
+    //Minutes
+    [SerializeField] int intervalTime = 10;
+    [SerializeField] Slider intervalSlider;
+    [SerializeField] TextMeshProUGUI intervalText;
+    public void SetIntervalTime()
+    {
+        intervalTime = (int)intervalSlider.value;
+        intervalText.text = $"{intervalTime} minutes";
+    }
+
     public void SendNotification()
     {
         string notif_title = "Simple Notification";
@@ -25,10 +39,12 @@ public class NotificationManager : MonoBehaviour
 
     public void SendRepeatingNotification()
     {
+        AndroidNotificationCenter.CancelAllScheduledNotifications();
+
         string notif_title = "Repeating Notification";
         string notif_message = "This is a repeating notification";
         DateTime fireTime = DateTime.Now.AddSeconds(5);
-        TimeSpan interval = new TimeSpan(0, 1, 0);
+        TimeSpan interval = new TimeSpan(0, intervalTime, 0);
 
         AndroidNotification notif = new AndroidNotification(notif_title, notif_message, fireTime, interval);
 
@@ -40,8 +56,8 @@ public class NotificationManager : MonoBehaviour
 
     public void SendDataNotification()
     {
-        string notif_title = "Data Notification";
-        string notif_message = "This is a data notification";
+        string notif_title = "Get 10G!";
+        string notif_message = "Play now to get 10G!";
         DateTime fireTime = DateTime.Now.AddSeconds(10);
 
         AndroidNotification notif = new AndroidNotification(notif_title, notif_message, fireTime);
@@ -108,10 +124,17 @@ public class NotificationManager : MonoBehaviour
         AndroidNotificationCenter.RegisterNotificationChannel(repeatingChannel);
     }
 
+    public void CancelNotifications()
+    {
+        AndroidNotificationCenter.CancelAllNotifications();
+    }
+
     private void Awake()
     {
         SetUpDefaultChannel();
         SetUpRepeatingChannel();
+
+        AndroidNotificationCenter.CancelAllNotifications();
     }
 
     private void Start()
