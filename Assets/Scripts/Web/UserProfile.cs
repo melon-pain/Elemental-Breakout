@@ -9,14 +9,6 @@ using System.Text;
 
 using TMPro;
 
-public enum UserEditType
-{
-    nickname,
-    name,
-    email,
-    contact
-}
-
 public class User
 {
     public int id;
@@ -33,15 +25,12 @@ public class User
         email = _email;
         contact = _contact;
     }
-
 }
 
 public class UserProfile : MonoBehaviour
 {
     //[SerializeField] private TextMeshProUGUI playersText;
     [SerializeField] private TextMeshProUGUI playerText;
-    [SerializeField] private UnityEvent OnUserProfileOpen;
-    [SerializeField] private UnityEvent OnUserProfileClose;
     [SerializeField] private UnityEvent OnUserProfileGetAll;
     public List<User> users = new List<User>();
     public string BaseURL
@@ -53,16 +42,7 @@ public class UserProfile : MonoBehaviour
     {
         if (Application.internetReachability != NetworkReachability.NotReachable)
         {
-            OnUserProfileOpen.Invoke();
             GetAllPlayers();
-        }
-    }
-
-    public void OnDisable()
-    {
-        if (Application.internetReachability != NetworkReachability.NotReachable)
-        {
-            OnUserProfileClose.Invoke();
         }
     }
 
