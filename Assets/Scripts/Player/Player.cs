@@ -34,6 +34,8 @@ public class Player : MonoBehaviour, IDamage
     private Coroutine RecoverSPCoroutine = null;
     #endregion SP
 
+    [SerializeField] private float m_InvulnerableTime = 2.0f;
+
     #endregion Player Stats
 
     public UnityEvent OnPlayerDeath = new UnityEvent();
@@ -111,7 +113,7 @@ public class Player : MonoBehaviour, IDamage
     private IEnumerator BecomeInvulnerable()
     {
         m_IsInvulnerable = true;
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(m_InvulnerableTime);
         m_IsInvulnerable = false;
         yield break;
     }
