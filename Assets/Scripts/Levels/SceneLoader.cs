@@ -65,6 +65,7 @@ public class SceneLoader : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+        yield return new WaitForSeconds(1.0f);
         OnLoadSceneFinished.Invoke();
 
         operation.allowSceneActivation = true;
@@ -85,6 +86,7 @@ public class SceneLoader : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+        yield return new WaitForSeconds(1.0f);
         OnLoadSceneFinished.Invoke();
 
         operation.allowSceneActivation = true;
