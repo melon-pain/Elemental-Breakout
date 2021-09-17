@@ -35,8 +35,8 @@ public class MeshLoader : MonoBehaviour
     {
         AssetBundle bundle = manager.LoadBundle(bundleName);
         AssetBundleRequest req = bundle.LoadAssetWithSubAssetsAsync<Mesh>(assetName);
-        
-        while (!req.isDone)
+
+        while (!req.isDone && this.GetComponent<Renderer>().material == null)
         {
             yield return null;
         }
@@ -52,12 +52,11 @@ public class MeshLoader : MonoBehaviour
         AssetBundle bundle = manager.LoadBundle(bundleName);
 
         AssetBundleRequest req = bundle.LoadAssetAsync<Mesh>(assetName);
-
-        while (!req.isDone)
+        while (!req.isDone && this.GetComponent<Renderer>().material == null)
         {
             yield return null;
         }
-
+        yield return new WaitForEndOfFrame();
         this.GetComponent<MeshFilter>().mesh = req.asset as Mesh;
 
         yield break;

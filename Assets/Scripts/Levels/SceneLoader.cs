@@ -9,6 +9,7 @@ public class SceneLoader : MonoBehaviour
     [ReadOnlyInInspector] public float progress = 0.0f;
     public UnityEvent OnLoadSceneStart = new UnityEvent();
     public UnityEvent<float> OnLoadSceneProgress = new UnityEvent<float>();
+    public UnityEvent OnLoadSceneFinished = new UnityEvent();
 
     public void LoadSceneSingle(int sceneBuildIndex)
     {
@@ -63,13 +64,11 @@ public class SceneLoader : MonoBehaviour
                 OnLoadSceneProgress.Invoke(this.progress);
             yield return new WaitForEndOfFrame();
         }
+
         yield return new WaitForSeconds(1.0f);
+        OnLoadSceneFinished.Invoke();
+
         operation.allowSceneActivation = true;
-
-        this.progress = operation.progress;
-
-        if (OnLoadSceneProgress.GetPersistentEventCount() > 0)
-            OnLoadSceneProgress.Invoke(this.progress);
     }
 
     private IEnumerator LoadSceneAsync(string sceneName, LoadSceneMode mode)
@@ -86,12 +85,10 @@ public class SceneLoader : MonoBehaviour
                 OnLoadSceneProgress.Invoke(this.progress);
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSeconds(1.0f);
-        operation.allowSceneActivation = true;
-        
-        this.progress = operation.progress;
 
-        if (OnLoadSceneProgress.GetPersistentEventCount() > 0)
-            OnLoadSceneProgress.Invoke(this.progress);
+        yield return new WaitForSeconds(1.0f);
+        OnLoadSceneFinished.Invoke();
+
+        operation.allowSceneActivation = true;
     }
 }

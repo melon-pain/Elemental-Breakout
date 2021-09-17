@@ -42,7 +42,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 61b46f1a8e385ee478937b5c0354d2eb, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.25
   m_Pitch: 1
@@ -140,4 +140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c51a31aad367afb4b9363a1dce882924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelBGM: {fileID: 8300000, guid: 61b46f1a8e385ee478937b5c0354d2eb, type: 3}
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  assetName: Theme_KaruelBorder
+  bossAssetName: Theme_KaruelBorder_Boss
+  gameOverAssetName: Drama_01
+  clearAssetName: TrackD
+  audioSource: {fileID: 6682937961411566107}
