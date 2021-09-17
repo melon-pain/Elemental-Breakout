@@ -33,7 +33,6 @@ public class AssetBundleManager : ScriptableObject
         }
         else
         {
-            Debug.Log(loadedBundles.Keys.Count);
             AssetBundle bundle = AssetBundle.LoadFromFile(Path.Combine(bundlesRootPath, bundleName));
             if (bundle)
             {

@@ -152,7 +152,6 @@ public class Enemy : MonoBehaviour, IDamage
         Sprite[] icons = bundle.LoadAssetWithSubAssets<Sprite>("T_Enemy_Element");
         m_ElementIcon.sprite = Array.Find<Sprite>(icons, item => item.name == "T_Enemy_Element_" + m_Element.ToString());
 
-        assetBundleManager.UnloadBundle("uibundle");
     }
 
     public void ResetScore()

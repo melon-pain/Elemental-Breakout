@@ -44232,6 +44232,9 @@ MonoBehaviour:
     - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
     - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
     m_Amount: 1
+    OnWaveStart:
+      m_PersistentCalls:
+        m_Calls: []
     OnWaveFinished:
       m_PersistentCalls:
         m_Calls: []
@@ -44240,6 +44243,9 @@ MonoBehaviour:
     - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
     - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
     m_Amount: 1
+    OnWaveStart:
+      m_PersistentCalls:
+        m_Calls: []
     OnWaveFinished:
       m_PersistentCalls:
         m_Calls: []
@@ -44248,6 +44254,9 @@ MonoBehaviour:
     - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
     - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
     m_Amount: 1
+    OnWaveStart:
+      m_PersistentCalls:
+        m_Calls: []
     OnWaveFinished:
       m_PersistentCalls:
         m_Calls: []
@@ -72959,6 +72968,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d40f184efae7c84888de69ed4aea7a1, type: 3}
+--- !u!114 &1985283461 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4736470633298763284, guid: 2d40f184efae7c84888de69ed4aea7a1, type: 3}
+  m_PrefabInstance: {fileID: 1985283460}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2002499598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75635,12 +75655,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 367857940}
     - target: {fileID: 1276204145086780501, guid: 43f8822a6163d314f984b62037e955c2, type: 3}
+      propertyPath: OnLoadSceneProgress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1985283461}
+    - target: {fileID: 1276204145086780501, guid: 43f8822a6163d314f984b62037e955c2, type: 3}
       propertyPath: OnLoadSceneStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1276204145086780501, guid: 43f8822a6163d314f984b62037e955c2, type: 3}
       propertyPath: OnLoadSceneStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 1276204145086780501, guid: 43f8822a6163d314f984b62037e955c2, type: 3}
+      propertyPath: OnLoadSceneProgress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_fillAmount
       objectReference: {fileID: 0}
     - target: {fileID: 1276204145086780501, guid: 43f8822a6163d314f984b62037e955c2, type: 3}
       propertyPath: OnLoadSceneStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
