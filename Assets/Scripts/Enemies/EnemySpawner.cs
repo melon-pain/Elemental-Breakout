@@ -11,6 +11,7 @@ public class EnemySpawner: MonoBehaviour
         [SerializeField] private List<GameObject> m_EnemiesToSpawn = new List<GameObject>();
         [ReadOnlyInInspector, SerializeField] private int m_Amount;
         private List<GameObject> m_Enemies = new List<GameObject>();
+        public UnityEvent OnWaveStart = new UnityEvent();
         public UnityEvent OnWaveFinished = new UnityEvent();
 
         public void Instantiate(Transform parent)
@@ -34,6 +35,7 @@ public class EnemySpawner: MonoBehaviour
                 enemy.SetActive(true);
                 enemy.GetComponent<Enemy>().OnDeath.AddListener(delegate { m_Amount--; CheckWave(); });
             }
+            OnWaveStart.Invoke();
         }
 
         private void CheckWave()
