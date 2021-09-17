@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Projectiles: {fileID: 3434872480770756922}
-  m_Damage: 5
+  m_Damage: 8
   m_ProjectileColors:
   - {r: 0.9, g: 0.25058824, b: 0.091764696, a: 1}
   - {r: 0.16078429, g: 0.8, b: 0.3738563, a: 1}
