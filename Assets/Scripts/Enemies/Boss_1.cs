@@ -43,6 +43,8 @@ public class Boss_1 : MonoBehaviour
 
         OnDeath.AddListener(player.GetComponentInChildren<PlayerShooting>().RemoveLockOn);
         OnDeath.AddListener(delegate { levelManager.AddScore(m_Score); });
+
+        transform.LookAt(player.transform);
     }
 
     private void Update()
