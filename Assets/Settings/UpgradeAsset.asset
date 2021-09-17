@@ -16,7 +16,7 @@ MonoBehaviour:
   m_maxHP:
     m_baseValue: 75
     m_additionalValue: 25
-    m_upgradeLevel: 9
+    m_upgradeLevel: 1
     m_maxUpgradeLevel: 9
     m_baseUpgradeCost: 0
     m_additionalUpgradeCost: 100
@@ -29,8 +29,8 @@ MonoBehaviour:
     m_additionalUpgradeCost: 100
   m_maxMP:
     m_baseValue: 200
-    m_additionalValue: 20
-    m_upgradeLevel: 4
+    m_additionalValue: 50
+    m_upgradeLevel: 1
     m_maxUpgradeLevel: 5
     m_baseUpgradeCost: 0
     m_additionalUpgradeCost: 100
@@ -51,7 +51,7 @@ MonoBehaviour:
   m_projectileRate:
     m_baseValue: 7.5
     m_additionalValue: 1.25
-    m_upgradeLevel: 5
+    m_upgradeLevel: 1
     m_maxUpgradeLevel: 5
     m_baseUpgradeCost: 50
     m_additionalUpgradeCost: 50
