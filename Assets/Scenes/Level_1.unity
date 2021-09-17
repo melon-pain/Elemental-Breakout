@@ -44231,6 +44231,30 @@ MonoBehaviour:
     - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
     - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
     - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
+    m_Amount: 1
+    OnWaveFinished:
+      m_PersistentCalls:
+        m_Calls: []
+  - m_EnemiesToSpawn:
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
+    m_Amount: 1
+    OnWaveFinished:
+      m_PersistentCalls:
+        m_Calls: []
+  - m_EnemiesToSpawn:
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
+    m_Amount: 1
+    OnWaveFinished:
+      m_PersistentCalls:
+        m_Calls: []
+  - m_EnemiesToSpawn:
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
     - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
     m_Amount: 1
     OnWaveStart:
@@ -52534,7 +52558,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh443652
+  m_Name: pb_Mesh657632
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -70947,7 +70971,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh697178
+  m_Name: pb_Mesh656568
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

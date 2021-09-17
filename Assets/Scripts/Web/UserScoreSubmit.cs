@@ -77,11 +77,13 @@ public class UserScoreSubmit : MonoBehaviour
         if (string.IsNullOrEmpty(request.error))
         {
             Debug.Log($"Created Score: {request.downloadHandler.text}");
+            requiredInput.gameObject.SetActive(false);
+            submitButton.transform.parent.gameObject.SetActive(false);
         }
         else
         {
             Debug.LogError($"Error: {request.error}");
-        }
+        }   
     }
 
 }

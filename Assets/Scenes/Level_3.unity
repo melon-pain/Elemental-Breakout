@@ -45744,79 +45744,6 @@ MonoBehaviour:
   m_Waves:
   - m_EnemiesToSpawn:
     - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
-    - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
-    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
-    - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
-    m_Amount: 1
-    OnWaveStart:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 906552726}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    OnWaveFinished:
-      m_PersistentCalls:
-        m_Calls: []
-  - m_EnemiesToSpawn:
-    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
-    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
-    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
-    - {fileID: 7939299653863910534, guid: ba48dff66e44cc143bfe49a9b1b60918, type: 3}
-    m_Amount: 1
-    OnWaveStart:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 906552726}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    OnWaveFinished:
-      m_PersistentCalls:
-        m_Calls: []
-  - m_EnemiesToSpawn:
-    - {fileID: 7939299653863910534, guid: ba48dff66e44cc143bfe49a9b1b60918, type: 3}
-    - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
-    - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
-    - {fileID: 7939299653863910534, guid: ba48dff66e44cc143bfe49a9b1b60918, type: 3}
-    m_Amount: 1
-    OnWaveStart:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 906552726}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    OnWaveFinished:
-      m_PersistentCalls:
-        m_Calls: []
-  - m_EnemiesToSpawn:
-    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
-    - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
     - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
     - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
     m_Amount: 1
@@ -45840,9 +45767,116 @@ MonoBehaviour:
         m_Calls: []
   - m_EnemiesToSpawn:
     - {fileID: 7939299653863910534, guid: ba48dff66e44cc143bfe49a9b1b60918, type: 3}
+    m_Amount: 1
+    OnWaveStart:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 906552726}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnWaveFinished:
+      m_PersistentCalls:
+        m_Calls: []
+  - m_EnemiesToSpawn:
+    - {fileID: 7939299653863910534, guid: ba48dff66e44cc143bfe49a9b1b60918, type: 3}
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
+    - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
+    m_Amount: 1
+    OnWaveStart:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 906552726}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnWaveFinished:
+      m_PersistentCalls:
+        m_Calls: []
+  - m_EnemiesToSpawn:
     - {fileID: 7939299653863910534, guid: ba48dff66e44cc143bfe49a9b1b60918, type: 3}
     - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
     - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
+    - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
+    m_Amount: 1
+    OnWaveStart:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 906552726}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnWaveFinished:
+      m_PersistentCalls:
+        m_Calls: []
+  - m_EnemiesToSpawn:
+    - {fileID: 7939299653863910534, guid: ba48dff66e44cc143bfe49a9b1b60918, type: 3}
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
+    - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
+    - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
+    m_Amount: 1
+    OnWaveStart:
+      m_PersistentCalls:
+        m_Calls: []
+    OnWaveFinished:
+      m_PersistentCalls:
+        m_Calls: []
+  - m_EnemiesToSpawn:
+    - {fileID: 7939299653863910534, guid: ba48dff66e44cc143bfe49a9b1b60918, type: 3}
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
+    - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
+    - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
+    m_Amount: 1
+    OnWaveStart:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 906552726}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnWaveFinished:
+      m_PersistentCalls:
+        m_Calls: []
+  - m_EnemiesToSpawn:
+    - {fileID: 7939299653863910534, guid: ba48dff66e44cc143bfe49a9b1b60918, type: 3}
+    - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
+    - {fileID: 2551983543529225686, guid: f8c5477ad4bcd824aa8f61abd70a23fa, type: 3}
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
+    - {fileID: 7939299653863910534, guid: f407ff8c891413c43bd2b427ecfad37b, type: 3}
     m_Amount: 1
     OnWaveStart:
       m_PersistentCalls:
