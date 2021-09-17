@@ -83,6 +83,7 @@ public class LevelManager : MonoBehaviour
         {
             m_GameOverScreen.SetActive(true);
             m_GameOverScoreText.text = level.score.ToString();
+            m_UserScoreSubmit.userScore = level.score;
             OnGameOver.Invoke();
         }
 

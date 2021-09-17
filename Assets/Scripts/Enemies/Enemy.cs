@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class Enemy : MonoBehaviour, IDamage
 {
     [Header("Element")]
@@ -43,11 +44,15 @@ public class Enemy : MonoBehaviour, IDamage
     [SerializeField] private Image m_HPBarOrange;
     [SerializeField] private Image m_Indicator;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip m_DamageTaken;
+
     public bool isDead { get => m_IsDead; }
     private bool m_IsDead = false;
     public UnityEvent OnDeath = new UnityEvent();
 
     private Player player;
+    private AudioSource audioSource;
 
     private void Awake()
     {
@@ -65,6 +70,7 @@ public class Enemy : MonoBehaviour, IDamage
         OnDeath.AddListener(player.GetComponentInChildren<PlayerShooting>().RemoveLockOn);
 
         m_CurrentHP = m_MaxHP;
+        audioSource = this.GetComponent<AudioSource>();
 
         AssetBundle bundle = assetBundleManager.LoadBundle("uibundle");
 
@@ -102,6 +108,7 @@ public class Enemy : MonoBehaviour, IDamage
 
         m_CurrentHP -= amount * Damage.GetModifier(attacking, m_Element);
         m_HPBar.UpdateBar(ratio);
+        audioSource.PlayOneShot(m_DamageTaken, 0.15f);
 
         if (m_ChangeElementOnHP)
         {

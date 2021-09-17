@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class Boss_1 : MonoBehaviour
 {
     [SerializeField] private float m_MaxHP = 1000.0f;
@@ -29,10 +30,18 @@ public class Boss_1 : MonoBehaviour
     [SerializeField] private Image m_HPBarRed;
     [SerializeField] private Image m_HPBarOrange;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip m_Shoot;
+    [SerializeField] private AudioClip m_DamageTaken;
+
+    private AudioSource audioSource;
+
     private void Start()
     {
         player = FindObjectOfType<Player>();
         m_CurrentHP = m_MaxHP;
+        audioSource = this.GetComponent<AudioSource>();
+
         StartCoroutine(Shoot());
 
         AssetBundle bundle = assetBundleManager.LoadBundle("uibundle");
@@ -67,6 +76,7 @@ public class Boss_1 : MonoBehaviour
             isShooting = true;
             m_Projectiles.Play();
             m_Animator.SetBool("IsShooting", true);
+            audioSource.PlayOneShot(m_Shoot, 0.25f);
             yield return new WaitForSeconds(chargeTime);
         }
     }
@@ -75,6 +85,7 @@ public class Boss_1 : MonoBehaviour
     {
         m_CurrentHP -= amount;
         m_HPBar.UpdateBar(m_CurrentHP / m_MaxHP);
+        audioSource.PlayOneShot(m_DamageTaken, 0.15f);
         Debug.Log(m_CurrentHP / m_MaxHP);
         if (m_CurrentHP <= 0.0f)
         {

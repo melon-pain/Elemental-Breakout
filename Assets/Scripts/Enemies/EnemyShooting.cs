@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(AudioSource))]
 public class EnemyShooting : MonoBehaviour
 {
     [Header("Projectile")]
@@ -14,11 +15,14 @@ public class EnemyShooting : MonoBehaviour
 
     [SerializeField] private Enemy enemy;
 
-    [Header("Audio")]
-    [SerializeField] private UnityEvent OnShoot;
-    [SerializeField] private UnityEvent OnDamageTaken;
+    [Header("Events")]
+    [SerializeField] private AudioClip m_OnShoot;
+
+    private AudioSource audioSource;
+
     private void Start()
     {
+        audioSource = this.GetComponent<AudioSource>();
         StartCoroutine(Shoot());
     }
 
@@ -40,7 +44,7 @@ public class EnemyShooting : MonoBehaviour
             if (m_Animator)
             {
                 m_Animator.SetBool("IsShooting", true);
-                OnShoot.Invoke();
+                audioSource.PlayOneShot(m_OnShoot, 0.25f);
             }
             yield return new WaitForSeconds(chargeTime);
         }
