@@ -43,7 +43,10 @@ public class Player : MonoBehaviour, IDamage
 
     #endregion Player Stats
 
+    #region Events
+    public UnityEvent OnDamageTaken = new UnityEvent();
     public UnityEvent OnPlayerDeath = new UnityEvent();
+    #endregion Events
 
     private void Start()
     {
@@ -73,9 +76,11 @@ public class Player : MonoBehaviour, IDamage
         if (m_CurrentSP > 0.0f)
         {
             m_CurrentSP--;
+            OnDamageTaken.Invoke();
             m_SPBar.UpdateBar(m_CurrentSP / m_MaxSP);
             if (RecoverSPCoroutine != null)
                 StopCoroutine(RecoverSPCoroutine);
+
             RecoverSPCoroutine = StartCoroutine(RecoverSP());
 
             if (InvulnerableCoroutine != null)
@@ -84,6 +89,7 @@ public class Player : MonoBehaviour, IDamage
         }
         else if (m_CurrentHP > 0.0f)
         {
+            OnDamageTaken.Invoke();
             m_CurrentHP -= amount;
             m_HPBar.UpdateBar(m_CurrentHP / m_MaxHP);
             m_HPText.text = $"{m_CurrentHP} / {m_MaxHP}";

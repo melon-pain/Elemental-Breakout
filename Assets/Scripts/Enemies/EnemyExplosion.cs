@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(AudioSource))]
 public class EnemyExplosion : MonoBehaviour
 {
     [SerializeField] private Enemy enemy;
@@ -11,13 +12,16 @@ public class EnemyExplosion : MonoBehaviour
     [SerializeField] private float m_Damage = 25.0f;
     [SerializeField] private List<Color> m_ProjectileColors = new List<Color>();
     [SerializeField] private Animator m_Animator;
+    [SerializeField] private AudioClip m_ChargeExplode;
 
     public UnityEvent OnExplode = new UnityEvent();
+    private AudioSource audioSource;
 
     private void Start()
     {
         var main = m_Projectiles.main;
         main.startColor = m_ProjectileColors[(int)enemy.element];
+        audioSource = this.GetComponent<AudioSource>();
         StartCoroutine(Explode());
     }
 
@@ -27,6 +31,7 @@ public class EnemyExplosion : MonoBehaviour
         m_Animator.SetTrigger("Explode");
         yield return new WaitForSeconds(1.0f);
         m_Projectiles.Play();
+        audioSource.PlayOneShot(m_ChargeExplode, 0.25f);
         OnExplode.Invoke();
         yield return new WaitForSeconds(2.0f);
         enemy.ResetScore();
