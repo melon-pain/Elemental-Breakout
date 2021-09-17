@@ -44298,11 +44298,11 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 347014432}
           m_TargetAssemblyTypeName: LevelBGM, Assembly-CSharp
-          m_MethodName: PlayBGM
-          m_Mode: 2
+          m_MethodName: LoadBossBGM
+          m_Mode: 1
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: c0bfda3f1c2970847b0a88148604f702, type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -78175,7 +78175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnGameOver.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnGameOver.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -78191,7 +78191,7 @@ PrefabInstance:
       objectReference: {fileID: 193173493}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnLevelClear.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnLevelClear.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -78203,7 +78203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnGameOver.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayBGM
+      value: LoadGameOverBGM
       objectReference: {fileID: 0}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnGameOver.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -78211,7 +78211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnLevelClear.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayBGM
+      value: LoadClearBGM
       objectReference: {fileID: 0}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnGameOver.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -78228,7 +78228,7 @@ PrefabInstance:
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnGameOver.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 8300000, guid: c1a88e232e8c5504fbdb6e13df1cbc99, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnGameOver.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
@@ -78236,10 +78236,10 @@ PrefabInstance:
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnLevelClear.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 8300000, guid: 64d1dfe61ea13ab4db4e13f9b4769988, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnGameOver.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.AudioClip, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnGameOver.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -78247,7 +78247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnLevelClear.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.AudioClip, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}

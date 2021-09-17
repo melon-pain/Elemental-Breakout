@@ -53,5 +53,6 @@ public class AssetBundleManager : ScriptableObject
     public void UnloadAllBundles()
     {
         AssetBundle.UnloadAllAssetBundles(true);
+        loadedBundles.Clear();
     }
 }

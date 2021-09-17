@@ -64,7 +64,6 @@ public class SceneLoader : MonoBehaviour
                 OnLoadSceneProgress.Invoke(this.progress);
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSeconds(1.0f);
 
         OnLoadSceneFinished.Invoke();
 
@@ -85,7 +84,6 @@ public class SceneLoader : MonoBehaviour
                 OnLoadSceneProgress.Invoke(this.progress);
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSeconds(1.0f);
 
         OnLoadSceneFinished.Invoke();
 

@@ -4629,6 +4629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687908026}
   - component: {fileID: 687908025}
+  - component: {fileID: 687908027}
   m_Layer: 0
   m_Name: Menu BGM
   m_TagString: Untagged
@@ -4646,7 +4647,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 613c75b5c7c260b4baa13c4b3f1afb0f, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.075
   m_Pitch: 1
@@ -4746,6 +4747,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &687908027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687908024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c51a31aad367afb4b9363a1dce882924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: dbd2fe3acd148d6409283ce64f15224f, type: 2}
+  assetName: TrackO
+  bossAssetName: 
+  gameOverAssetName: 
+  clearAssetName: 
+  audioSource: {fileID: 687908025}
 --- !u!114 &688137419 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6358403248322978677, guid: b727c109ad22ad0498d34d18fcf3c465, type: 3}

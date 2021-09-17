@@ -57,7 +57,7 @@ public class MeshLoader : MonoBehaviour
         {
             yield return null;
         }
-
+        yield return new WaitForEndOfFrame();
         this.GetComponent<MeshFilter>().mesh = req.asset as Mesh;
 
         yield break;

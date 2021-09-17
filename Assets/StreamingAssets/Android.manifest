@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 4258689928
+CRC: 2310187258
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -36,3 +36,6 @@ AssetBundleManifest:
       Name: wintermaterialbundle
       Dependencies:
         Dependency_0: wintertexturebundle
+    Info_10:
+      Name: bgmbundle
+      Dependencies: {}
