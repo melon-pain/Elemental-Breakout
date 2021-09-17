@@ -1007,7 +1007,6 @@ MonoBehaviour:
   - {r: 0.4509804, g: 0.7516341, b: 0.9019608, a: 1}
   m_Animator: {fileID: 7939299653863910531}
   enemy: {fileID: 7939299653863910529}
-  m_OnShoot: {fileID: 8300000, guid: 9a4a578f09b96af4eacba15ac44ac4a6, type: 3}
 --- !u!199 &7939299653739972148
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5790,9 +5789,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9a4a578f09b96af4eacba15ac44ac4a6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 44d5c226614f61b47a283675391d0ef2, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

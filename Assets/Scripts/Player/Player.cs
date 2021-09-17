@@ -43,6 +43,7 @@ public class Player : MonoBehaviour, IDamage
 
     #endregion Player Stats
 
+
     #region Events
     public UnityEvent OnDamageTaken = new UnityEvent();
     public UnityEvent OnPlayerDeath = new UnityEvent();

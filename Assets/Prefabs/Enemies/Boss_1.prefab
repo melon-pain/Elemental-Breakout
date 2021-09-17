@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_HPBarIcon: {fileID: 8939023084081058036}
   m_HPBarRed: {fileID: 6861885543217065142}
   m_HPBarOrange: {fileID: 1679224536794548698}
-  m_Shoot: {fileID: 8300000, guid: 9a4a578f09b96af4eacba15ac44ac4a6, type: 3}
+  m_Shoot: {fileID: 8300000, guid: 44d5c226614f61b47a283675391d0ef2, type: 3}
   m_DamageTaken: {fileID: 8300000, guid: 8361d4e4d9a84ce429ffa051e2159ee5, type: 3}
 --- !u!82 &5438522429776237061
 AudioSource:

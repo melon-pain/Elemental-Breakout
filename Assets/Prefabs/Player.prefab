@@ -4974,7 +4974,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  m_InfiniteMP: 0
   m_AimTarget: {fileID: 501714891644755002}
+  m_Core: {fileID: 5959431148823151856}
   OnProjectileShoot:
     m_PersistentCalls:
       m_Calls:
@@ -19725,6 +19727,7 @@ MonoBehaviour:
   m_CurrentHP: 100
   m_HPBar: {fileID: 0}
   m_HPText: {fileID: 0}
+  m_InfiniteHP: 0
   m_MaxSP: 4
   m_CurrentSP: 3
   m_SPBar: {fileID: 0}
@@ -19942,16 +19945,29 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5122729196051506736, guid: bbcc79c11f06bb64dae4e876b1672913, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cf491c626f7283b4ab48e11c63bd32c3, type: 2}
     - target: {fileID: -3061904764030682015, guid: bbcc79c11f06bb64dae4e876b1672913, type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3061904764030682015, guid: bbcc79c11f06bb64dae4e876b1672913, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 97a0b9a044c53ef46b8d20d11d67d304, type: 2}
     - target: {fileID: 919132149155446097, guid: bbcc79c11f06bb64dae4e876b1672913, type: 3}
       propertyPath: m_Name
       value: Player Model
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbcc79c11f06bb64dae4e876b1672913, type: 3}
+--- !u!23 &5959431148823151856 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -3061904764030682015, guid: bbcc79c11f06bb64dae4e876b1672913, type: 3}
+  m_PrefabInstance: {fileID: 519544364496550033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &53888876084862842 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bbcc79c11f06bb64dae4e876b1672913, type: 3}
