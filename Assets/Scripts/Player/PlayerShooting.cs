@@ -47,7 +47,7 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
     [Tooltip("The amount of Mana Points the player currently has")]
     [SerializeField] private float m_CurrentMP;
     public UnityEvent<float> OnMPChanged = new UnityEvent<float>();
-    private bool m_InfiniteMP = false;
+    [SerializeField] private bool m_InfiniteMP = false;
     #endregion MP
 
     [Header("Aim")]
@@ -196,7 +196,6 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
         if (eventData.gameObject && m_WeaponType == WeaponType.Projectile)
         {
             m_AimTarget.transform.parent = eventData.gameObject.transform;
-            Debug.Log(this.transform.parent.name);
             if (eventData.gameObject.GetComponent<BoxCollider>())
                 m_AimTarget.transform.localPosition = eventData.gameObject.GetComponent<BoxCollider>().center;
             else

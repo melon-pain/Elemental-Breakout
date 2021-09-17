@@ -32,6 +32,8 @@ public class LevelManager : MonoBehaviour
     [Header("Upgrades")]
     [SerializeField] private Upgrades upgrades;
 
+    private bool isOver = false;
+
     private void Start()
     {
         m_ScoreText.text = $"Score: <b>{level.score + m_levelScore}</b>";
@@ -45,8 +47,19 @@ public class LevelManager : MonoBehaviour
 
     public void AddScore(int amount)
     {
-        m_levelScore += amount;
-        m_ScoreText.text = $"Score: <b>{level.score + m_levelScore}</b>";
+        if (!isOver)
+        {
+            m_levelScore += amount;
+            m_ScoreText.text = $"Score: <b>{level.score + m_levelScore}</b>";
+        }
+        else
+        {
+            Debug.Log("Over");
+            level.AddScore(amount);
+            m_ScoreText.text = $"Score: <b>{level.score}</b>";
+            m_TotalScoreText.text = level.score.ToString();
+            m_GameOverScoreText.text = level.score.ToString();
+        }
     }
 
     public void PauseGame()
@@ -61,8 +74,9 @@ public class LevelManager : MonoBehaviour
 
     public void GameOver(bool isFinished)
     {
+        isOver = true;
         level.AddScore(m_levelScore);
-
+        m_levelScore = 0;
         if (isFinished)
         {
             if (m_TimeElapsed < 240.0f)
@@ -88,6 +102,7 @@ public class LevelManager : MonoBehaviour
         }
 
         m_ScoreText.text = $"Score: <b>{level.score}</b>";
+        Debug.Log(m_ScoreText.text);
         upgrades.Save();
         PauseGame();
     }

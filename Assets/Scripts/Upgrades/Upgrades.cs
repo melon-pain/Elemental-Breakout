@@ -85,9 +85,7 @@ public class Upgrades : ScriptableObject
 
     public void AddCurrency(int amount)
     {
-        Debug.Log($"Old funds {m_Funds}");
         this.m_Funds += amount;
-        Debug.Log($"New funds {m_Funds}");
     }
 
     public void LoseCurrency(int amount)

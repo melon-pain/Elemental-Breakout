@@ -26,7 +26,7 @@ public class Player : MonoBehaviour, IDamage
     [SerializeField] private TMP_Text m_HPText;
     private bool m_IsInvulnerable = false;
     private Coroutine InvulnerableCoroutine = null;
-    private bool m_InfiniteHP = false;
+    [SerializeField] private bool m_InfiniteHP = false;
     #endregion HP
 
     #region SP

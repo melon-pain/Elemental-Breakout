@@ -52,6 +52,7 @@ public class Boss_1 : MonoBehaviour
 
         OnDeath.AddListener(player.GetComponentInChildren<PlayerShooting>().RemoveLockOn);
         OnDeath.AddListener(delegate { levelManager.AddScore(m_Score); });
+        OnDeath.AddListener(delegate { levelManager.GameOver(true); });
 
         transform.LookAt(player.transform);
     }
@@ -86,7 +87,6 @@ public class Boss_1 : MonoBehaviour
         m_CurrentHP -= amount;
         m_HPBar.UpdateBar(m_CurrentHP / m_MaxHP);
         audioSource.PlayOneShot(m_DamageTaken, 0.15f);
-        Debug.Log(m_CurrentHP / m_MaxHP);
         if (m_CurrentHP <= 0.0f)
         {
             m_IsDead = true;

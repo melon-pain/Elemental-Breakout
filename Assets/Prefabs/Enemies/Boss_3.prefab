@@ -6055,6 +6055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4681f3b905102304ca5210cc2852a936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_IsBoss: 1
   m_Element: 0
   m_RandomElement: 0
   m_ChangeElementOnHP: 0

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(AudioSource))]
 public class Enemy : MonoBehaviour, IDamage
 {
+    [SerializeField] private bool m_IsBoss = false;
     [Header("Element")]
     [SerializeField] private Element m_Element;
     public Element element { get => m_Element; }
@@ -88,6 +89,8 @@ public class Enemy : MonoBehaviour, IDamage
         if (m_ChangeElementOnTime)
             StartCoroutine(ChangeElementOnTime());
 
+        if (m_IsBoss)
+            OnDeath.AddListener(delegate { levelManager.GameOver(true); });
         Invoke("Visible", 0.1f);
     }
 
