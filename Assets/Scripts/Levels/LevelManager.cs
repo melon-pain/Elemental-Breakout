@@ -61,14 +61,14 @@ public class LevelManager : MonoBehaviour
 
     public void GameOver(bool isFinished)
     {
-        level.AddScore(m_levelScore);
-
         if (isFinished)
         {
             if (m_TimeElapsed < 240.0f)
             {
-                level.AddScore(1000);
+                AddScore(1000);
             }
+
+            level.AddScore(m_levelScore);
 
             int funds = level.score / 10;
 
@@ -86,7 +86,7 @@ public class LevelManager : MonoBehaviour
             OnGameOver.Invoke();
         }
 
+        m_ScoreText.text = $"Score: <b>{level.score}</b>";
         PauseGame();
-        
     }
 }
