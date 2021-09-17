@@ -12,6 +12,10 @@ public class Boss_1 : MonoBehaviour
 
     [SerializeField] private ParticleSystem m_Projectiles;
 
+    [Header("Score")]
+    [SerializeField] private LevelManager levelManager;
+    [SerializeField] private int m_Score = 1000;
+
     [SerializeField] private Animator m_Animator;
     private bool m_IsDead = false;
     public UnityEvent OnDeath = new UnityEvent();
@@ -35,8 +39,10 @@ public class Boss_1 : MonoBehaviour
         m_HPBarIcon.sprite = bundle.LoadAsset<Sprite>("T_Bar");
         m_HPBarRed.sprite = bundle.LoadAsset<Sprite>("T_Bar");
         m_HPBarOrange.sprite = bundle.LoadAsset<Sprite>("T_Bar");
+        levelManager = FindObjectOfType<LevelManager>();
 
         OnDeath.AddListener(player.GetComponentInChildren<PlayerShooting>().RemoveLockOn);
+        OnDeath.AddListener(delegate { levelManager.AddScore(m_Score); });
     }
 
     private void Update()
