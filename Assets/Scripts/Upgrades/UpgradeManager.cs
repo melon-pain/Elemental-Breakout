@@ -9,26 +9,16 @@ public class UpgradeManager : MonoBehaviour
 
     private void Awake()
     {
-        string filePath = Application.persistentDataPath + "/upgrades.json";
-        if (File.Exists(filePath))
-        {
-            Debug.Log("File exists!");
-            JsonUtility.FromJsonOverwrite(File.ReadAllText(filePath), m_Upgrades);
-        }
+        m_Upgrades.Load();
     }
 
     private void OnDestroy()
     {
-        string filePath = Application.persistentDataPath + "/upgrades.json";
-        File.WriteAllText(filePath, JsonUtility.ToJson(m_Upgrades));
+        m_Upgrades.Save();
     }
 
     private void OnApplicationPause(bool pause)
     {
-        if (pause)
-        {
-            string filePath = Application.persistentDataPath + "/upgrades.json";
-            File.WriteAllText(filePath, JsonUtility.ToJson(m_Upgrades));
-        }
+        m_Upgrades.Save();
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 [System.Serializable]
@@ -84,7 +85,9 @@ public class Upgrades : ScriptableObject
 
     public void AddCurrency(int amount)
     {
+        Debug.Log($"Old funds {m_Funds}");
         this.m_Funds += amount;
+        Debug.Log($"New funds {m_Funds}");
     }
 
     public void LoseCurrency(int amount)
@@ -105,4 +108,19 @@ public class Upgrades : ScriptableObject
         upgrade.Upgrade();
     }
 
+    public void Save()
+    {
+        string filePath = Application.persistentDataPath + "/upgrades.json";
+        File.WriteAllText(filePath, JsonUtility.ToJson(this));
+    }
+
+    public void Load()
+    {
+        string filePath = Application.persistentDataPath + "/upgrades.json";
+        if (File.Exists(filePath))
+        {
+            Debug.Log("File exists!");
+            JsonUtility.FromJsonOverwrite(File.ReadAllText(filePath), this);
+        }
+    }
 }

@@ -29,7 +29,6 @@ public class AssetBundleManager : ScriptableObject
     {
         if (loadedBundles.ContainsKey(bundleName))
         {
-            Debug.Log("Return existing");
             return loadedBundles[bundleName];
         }
         else
