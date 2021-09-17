@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyShooting : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class EnemyShooting : MonoBehaviour
 
     [SerializeField] private Enemy enemy;
 
+    [Header("Audio")]
+    [SerializeField] private UnityEvent OnShoot;
+    [SerializeField] private UnityEvent OnDamageTaken;
     private void Start()
     {
         StartCoroutine(Shoot());
@@ -34,7 +38,10 @@ public class EnemyShooting : MonoBehaviour
             main.startColor = m_ProjectileColors[(int)enemy.element];
             m_Projectiles.Play();
             if (m_Animator)
+            {
                 m_Animator.SetBool("IsShooting", true);
+                OnShoot.Invoke();
+            }
             yield return new WaitForSeconds(chargeTime);
         }
         yield break;

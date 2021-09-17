@@ -43,7 +43,7 @@ public class NotificationManager : MonoBehaviour
 
         string notif_title = "Repeating Notification";
         string notif_message = "This is a repeating notification";
-        DateTime fireTime = DateTime.Now.AddSeconds(5);
+        DateTime fireTime = DateTime.Now.AddSeconds(10);
         TimeSpan interval = new TimeSpan(0, intervalTime, 0);
 
         AndroidNotification notif = new AndroidNotification(notif_title, notif_message, fireTime, interval);
@@ -56,8 +56,8 @@ public class NotificationManager : MonoBehaviour
 
     public void SendDataNotification()
     {
-        string notif_title = "Get 10G!";
-        string notif_message = "Play now to get 10G!";
+        string notif_title = "Get 50G!";
+        string notif_message = "Play now to get 50G!";
         DateTime fireTime = DateTime.Now.AddSeconds(10);
 
         AndroidNotification notif = new AndroidNotification(notif_title, notif_message, fireTime);
