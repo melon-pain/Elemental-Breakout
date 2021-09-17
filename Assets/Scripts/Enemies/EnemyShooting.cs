@@ -34,6 +34,7 @@ public class EnemyShooting : MonoBehaviour
             m_Projectiles.Stop();
             if (m_Animator)
                 m_Animator.SetBool("IsShooting", false);
+            audioSource.Stop();
             yield return new WaitForSeconds(chargeTime);
 
             if (enemy.isDead)
@@ -44,7 +45,7 @@ public class EnemyShooting : MonoBehaviour
             if (m_Animator)
             {
                 m_Animator.SetBool("IsShooting", true);
-                audioSource.PlayOneShot(m_OnShoot, 0.25f);
+                audioSource.Play();
             }
             yield return new WaitForSeconds(chargeTime);
         }

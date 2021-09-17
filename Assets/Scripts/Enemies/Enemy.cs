@@ -107,9 +107,9 @@ public class Enemy : MonoBehaviour, IDamage
             return;
         }
 
-        float ratio = m_CurrentHP / m_MaxHP;
 
         m_CurrentHP -= amount * Damage.GetModifier(attacking, m_Element);
+        float ratio = m_CurrentHP / m_MaxHP;
         m_HPBar.UpdateBar(ratio);
         audioSource.PlayOneShot(m_DamageTaken, 0.15f);
 
