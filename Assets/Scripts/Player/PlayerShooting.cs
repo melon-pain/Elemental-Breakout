@@ -54,6 +54,8 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
     [SerializeField] private GameObject m_AimTarget;
     private GameObject m_Target;
 
+    [SerializeField] private MeshRenderer m_Core;
+
     [Space(4.0f)]
     public UnityEvent OnProjectileShoot;
     private Coroutine ShootCoroutine = null;
@@ -180,6 +182,8 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
 
         m_Beam.GetComponent<MeshRenderer>().materials[0].SetColor("_EmissionColor", m_ProjectileColors[newElement] * 4);
         m_Beam.GetComponent<MeshRenderer>().materials[1].SetColor("_EmissionColor", m_ProjectileColors[newElement] * 16);
+
+        m_Core.material.SetColor("_BaseColor", m_ProjectileColors[newElement] * 16);
     }
 
     private void OnParticleCollision(GameObject other)

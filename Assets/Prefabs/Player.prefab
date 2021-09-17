@@ -4976,6 +4976,7 @@ MonoBehaviour:
         m_CallState: 2
   m_InfiniteMP: 0
   m_AimTarget: {fileID: 501714891644755002}
+  m_Core: {fileID: 5959431148823151856}
   OnProjectileShoot:
     m_PersistentCalls:
       m_Calls:
@@ -19962,6 +19963,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbcc79c11f06bb64dae4e876b1672913, type: 3}
+--- !u!23 &5959431148823151856 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -3061904764030682015, guid: bbcc79c11f06bb64dae4e876b1672913, type: 3}
+  m_PrefabInstance: {fileID: 519544364496550033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &53888876084862842 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bbcc79c11f06bb64dae4e876b1672913, type: 3}
