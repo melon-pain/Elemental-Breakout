@@ -35617,7 +35617,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2587062986469197909, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
   m_PrefabInstance: {fileID: 1853226452567472692}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1853226452567472697}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 935b5dfa66712db4684bc531bca1dd3b, type: 3}
@@ -73212,6 +73212,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7928836939876729959, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
   m_PrefabInstance: {fileID: 1853226452567472692}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1853226452567472696 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1044021956689508178, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
+  m_PrefabInstance: {fileID: 1853226452567472692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1853226452567472697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8279715969125973147, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
+  m_PrefabInstance: {fileID: 1853226452567472692}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4948783577634810579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73524,7 +73540,7 @@ PrefabInstance:
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: m_GameOverScreen
       value: 
-      objectReference: {fileID: 779953832}
+      objectReference: {fileID: 1853226452567472697}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: m_LevelClearText
       value: 
@@ -73545,6 +73561,10 @@ PrefabInstance:
       propertyPath: m_LevelClearScreen
       value: 
       objectReference: {fileID: 779953832}
+    - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
+      propertyPath: m_GameOverScoreText
+      value: 
+      objectReference: {fileID: 1853226452567472696}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnGameOver.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2

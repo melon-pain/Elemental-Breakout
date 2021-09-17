@@ -4992,6 +4992,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9021894600445161734}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_loop
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnBeamShoot:
     m_PersistentCalls:
       m_Calls:
@@ -5006,6 +5018,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9021894600445161734}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: set_loop
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!198 &6826963024908893844
 ParticleSystem:
@@ -9894,7 +9918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfx:
   - {fileID: 8300000, guid: 9a4a578f09b96af4eacba15ac44ac4a6, type: 3}
-  - {fileID: 8300000, guid: b5ead275380252e4ebe5c3f64fca7d42, type: 3}
+  - {fileID: 8300000, guid: d615881dee9068b44bb5a65a094d908a, type: 3}
 --- !u!1 &5163490700020044694
 GameObject:
   m_ObjectHideFlags: 0

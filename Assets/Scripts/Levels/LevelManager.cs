@@ -17,15 +17,17 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private int m_levelScore;
     [SerializeField] private TMP_Text m_ScoreText;
 
-    [Header("Game Over")]
+    [Header("Level Clear")]
     [SerializeField] private GameObject m_LevelClearScreen;
-    [SerializeField] private TMP_Text m_LevelClearText;
     [SerializeField] private TMP_Text m_TotalScoreText;
     [SerializeField] private TMP_Text m_TotalFundsText;
-    [SerializeField] private GameObject m_ContinueButton;
     [SerializeField] private UserScoreSubmit m_UserScoreSubmit;
     [SerializeField] private UnityEvent OnLevelClear;
     [SerializeField] private UnityEvent OnGameOver;
+
+    [Header("Game Over")]
+    [SerializeField] private GameObject m_GameOverScreen;
+    [SerializeField] private TMP_Text m_GameOverScoreText;
 
     [Header("Upgrades")]
     [SerializeField] private Upgrades upgrades;
@@ -72,24 +74,19 @@ public class LevelManager : MonoBehaviour
 
             upgrades.AddCurrency(funds);
             m_TotalFundsText.text = funds.ToString();
-
-            m_LevelClearText.text = "LEVEL CLEAR";
-            m_ContinueButton.SetActive(true);
-
+            m_LevelClearScreen.SetActive(true);
+            m_TotalScoreText.text = level.score.ToString();
+            m_UserScoreSubmit.userScore = level.score;
             OnLevelClear.Invoke();
         }
         else
         {
-            level.ResetScore();
-            m_LevelClearText.text = "GAME OVER";
-            m_ContinueButton.SetActive(false);
-
+            m_GameOverScreen.SetActive(true);
+            m_GameOverScoreText.text = level.score.ToString();
             OnGameOver.Invoke();
         }
 
         PauseGame();
-        m_LevelClearScreen.SetActive(true);
-        m_TotalScoreText.text = level.score.ToString();
-        m_UserScoreSubmit.userScore = level.score;
+        
     }
 }

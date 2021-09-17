@@ -36841,7 +36841,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2587062986469197909, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
   m_PrefabInstance: {fileID: 1853226452567472692}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1582634303}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 935b5dfa66712db4684bc531bca1dd3b, type: 3}
@@ -37413,6 +37413,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 4f2efb2d61eac7642be2fb185b269ac0, type: 3}
   m_PrefabInstance: {fileID: 652245053}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &656086307 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1044021956689508178, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
+  m_PrefabInstance: {fileID: 1853226452567472692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &657066549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62010,6 +62021,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 4f2efb2d61eac7642be2fb185b269ac0, type: 3}
   m_PrefabInstance: {fileID: 1581748657}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1582634303 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8279715969125973147, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
+  m_PrefabInstance: {fileID: 1853226452567472692}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1585366632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77068,6 +77084,14 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2747168483549940249, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 791.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747168483549940249, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 134.07
+      objectReference: {fileID: 0}
     - target: {fileID: 3047588769687654786, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -77520,24 +77544,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7595850147422521197, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7595850147422521197, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7595850147422521197, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7595850147422521197, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7595850147422521197, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
-      propertyPath: m_AnchoredPosition.y
+    - target: {fileID: 8279715969125973147, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8400939527293631928, guid: 27b63254e2aecc24c963ee60a7739d6f, type: 3}
@@ -78125,7 +78133,7 @@ PrefabInstance:
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: m_GameOverScreen
       value: 
-      objectReference: {fileID: 779953832}
+      objectReference: {fileID: 1582634303}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: m_LevelClearText
       value: 
@@ -78146,6 +78154,10 @@ PrefabInstance:
       propertyPath: m_LevelClearScreen
       value: 
       objectReference: {fileID: 779953832}
+    - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
+      propertyPath: m_GameOverScoreText
+      value: 
+      objectReference: {fileID: 656086307}
     - target: {fileID: 8454325007026442783, guid: 035bbd9240359ff4fbafa97e90f88ba7, type: 3}
       propertyPath: OnGameOver.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
