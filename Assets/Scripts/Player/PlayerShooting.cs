@@ -56,7 +56,6 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
 
     [Space(4.0f)]
     public UnityEvent OnProjectileShoot;
-    public UnityEvent OnBeamShoot;
     private Coroutine ShootCoroutine = null;
 
     // Start is called before the first frame update
@@ -138,7 +137,6 @@ public class PlayerShooting : MonoBehaviour, ISpreadHandler
                         m_BeamHit.transform.position = hit.point;
                         m_BeamHit.Play();
                     }
-                    OnBeamShoot.Invoke();
                     yield return new WaitForSeconds(1.0f / m_BeamTickRate);
                 }
                 m_Beam.SetActive(false);
