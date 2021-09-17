@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c06542910dfb754aa670a52b12bb428, type: 3}
   m_Name: UpgradeAsset
   m_EditorClassIdentifier: 
-  m_Funds: 1550
+  m_Funds: 0
   m_maxHP:
-    m_baseValue: 50
-    m_additionalValue: 50
+    m_baseValue: 75
+    m_additionalValue: 25
     m_upgradeLevel: 1
-    m_maxUpgradeLevel: 5
+    m_maxUpgradeLevel: 9
     m_baseUpgradeCost: 0
     m_additionalUpgradeCost: 100
   m_maxSP:
@@ -36,9 +36,9 @@ MonoBehaviour:
     m_additionalUpgradeCost: 100
   m_projectileDMG:
     m_baseValue: 2.5
-    m_additionalValue: 2.5
+    m_additionalValue: 1.25
     m_upgradeLevel: 1
-    m_maxUpgradeLevel: 5
+    m_maxUpgradeLevel: 10
     m_baseUpgradeCost: 50
     m_additionalUpgradeCost: 50
   m_projectileCost:
@@ -50,7 +50,7 @@ MonoBehaviour:
     m_additionalUpgradeCost: 50
   m_projectileRate:
     m_baseValue: 7.5
-    m_additionalValue: 2.5
+    m_additionalValue: 1.25
     m_upgradeLevel: 1
     m_maxUpgradeLevel: 5
     m_baseUpgradeCost: 50
@@ -73,6 +73,6 @@ MonoBehaviour:
     m_baseValue: 60
     m_additionalValue: -10
     m_upgradeLevel: 1
-    m_maxUpgradeLevel: 5
+    m_maxUpgradeLevel: 8
     m_baseUpgradeCost: 50
     m_additionalUpgradeCost: 50

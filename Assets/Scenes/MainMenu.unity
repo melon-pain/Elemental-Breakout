@@ -13344,7 +13344,6 @@ MonoBehaviour:
   - {fileID: 2103356385}
   - {fileID: 104746776}
   - {fileID: 1085414592}
-  - {fileID: 0}
   toggles:
   - {fileID: 442317209}
   - {fileID: 1333538480}
