@@ -15,9 +15,6 @@ public class EnemyShooting : MonoBehaviour
 
     [SerializeField] private Enemy enemy;
 
-    [Header("Events")]
-    [SerializeField] private AudioClip m_OnShoot;
-
     private AudioSource audioSource;
 
     private void Start()

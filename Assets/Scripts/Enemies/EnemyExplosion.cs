@@ -12,7 +12,6 @@ public class EnemyExplosion : MonoBehaviour
     [SerializeField] private float m_Damage = 25.0f;
     [SerializeField] private List<Color> m_ProjectileColors = new List<Color>();
     [SerializeField] private Animator m_Animator;
-    [SerializeField] private AudioClip m_ChargeExplode;
 
     public UnityEvent OnExplode = new UnityEvent();
     private AudioSource audioSource;
@@ -31,7 +30,7 @@ public class EnemyExplosion : MonoBehaviour
         m_Animator.SetTrigger("Explode");
         yield return new WaitForSeconds(1.0f);
         m_Projectiles.Play();
-        audioSource.PlayOneShot(m_ChargeExplode, 0.25f);
+        audioSource.Play();
         OnExplode.Invoke();
         yield return new WaitForSeconds(2.0f);
         enemy.ResetScore();
