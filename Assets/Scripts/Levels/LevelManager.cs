@@ -87,10 +87,11 @@ public class LevelManager : MonoBehaviour
             int funds = level.score / 10;
 
             upgrades.AddCurrency(funds);
-            m_TotalFundsText.text = funds.ToString();
+            m_TotalFundsText.text = funds.ToString() + "G";
             m_LevelClearScreen.SetActive(true);
             m_TotalScoreText.text = level.score.ToString();
             m_UserScoreSubmit.userScore = level.score;
+            m_GameOverScoreText.text = level.score.ToString();
             OnLevelClear.Invoke();
         }
         else
