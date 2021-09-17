@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private List<GameObject> submenus = new List<GameObject>();
     private void Start()
     {
+        Time.timeScale = 1.0f;
     }
 
     public void Activate(int index)
